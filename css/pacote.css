@@ -1,0 +1,1551 @@
+/* Importa a fonte Kumbh Sans do Google Fonts, com pesos regular (400) e negrito (700), usada em todo o site para consistência tipográfica */
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+/* Reset básico: remove margens e paddings padrão, aplica box-sizing: border-box para facilitar cálculos de tamanho */
+*, *::before, *::after {
+  margin: 0; /* Remove margens padrão de todos os elementos */
+  padding: 0; /* Remove paddings padrão de todos os elementos */
+  box-sizing: border-box; /* Inclui bordas e padding no cálculo de largura/altura */
+}
+
+/* Define variáveis CSS para a paleta de cores, reutilizáveis em todo o site */
+:root {
+  --orange: hsl(26, 100%, 55%); /* Cor laranja vibrante, usada para botões, destaques e ícones */
+  --pale-orange: hsl(25, 100%, 94%); /* Laranja claro, usado para fundos sutis */
+  --very-dark-blue: hsl(220, 13%, 13%); /* Azul escuro, para textos principais */
+  --dark-grayish-blue: hsl(219, 9%, 45%); /* Cinza-azulado escuro, para textos secundários */
+  --grayish-blue: hsl(220, 14%, 75%); /* Cinza-azulado claro, para preços antigos ou bordas */
+  --light-grayish-blue: hsl(223, 64%, 98%); /* Cinza muito claro, para fundos de formulários */
+  --white: hsl(0, 0%, 100%); /* Branco, para fundos e textos em botões */
+  --black: hsl(0, 0%, 0%); /* Preto, para bordas ou textos */
+  --black-with-opacity: hsla(0, 0%, 0%, 0.75); /* Preto com 75% de opacidade, para fundos de modais/lightbox */
+}
+
+/* Aplica a fonte Kumbh Sans a todo o HTML, garantindo consistência */
+html {
+  font-family: "Kumbh Sans", sans-serif; /* Define a fonte padrão do site */
+}
+
+/* Define o corpo da página com altura e largura mínimas para ocupar a tela inteira */
+body {
+  min-height: 100vh; /* Garante que o corpo ocupe pelo menos a altura total da viewport */
+  min-width: 100vw; /* Garante que o corpo ocupe pelo menos a largura total da viewport */
+  position: relative; /* Permite posicionamento absoluto de elementos filhos (ex.: lightbox) */
+}
+
+/* Remove decoração padrão de links e define cor padrão */
+a {
+  text-decoration: none; /* Remove sublinhado padrão de links */
+  color: var(--dark-grayish-blue); /* Define cor cinza-azulada para links */
+}
+
+/* Container principal: centraliza o conteúdo e define largura máxima */
+.container {
+  max-width: 1120px; /* Limita a largura do conteúdo a 1120px em telas grandes */
+  min-height: 100vh; /* Garante que o container ocupe a altura total da viewport */
+  padding: 0 5px; /* Adiciona pequeno padding lateral */
+  margin: auto; /* Centraliza o container horizontalmente */
+}
+
+/* Estiliza a barra superior (header), com flexbox para alinhar logo e navegação */
+.top-bar {
+  display: flex; /* Usa flexbox para alinhar elementos */
+  justify-content: space-between; /* Espaça logo e navegação nas extremidades */
+  align-items: center; /* Alinha verticalmente ao centro */
+  padding: 10px 5%; /* Adiciona padding vertical e lateral (5% da largura) */
+  position: absolute; /* Posiciona a barra no topo, sobrepondo outros elementos */
+  top: 10px; /* Afasta 10px do topo */
+  left: 0; /* Alinha à esquerda */
+  right: 0; /* Alinha à direita */
+  z-index: 10; /* Garante que a barra fique acima de outros elementos */
+}
+
+/* Estiliza os contêineres laterais (logo e menu) */
+.sides {
+  display: flex; /* Usa flexbox para alinhar logo e menu */
+  align-items: center; /* Alinha verticalmente ao centro */
+  flex: 0 0 auto; /* Impede que os contêineres laterais cresçam ou encolham */
+}
+
+/* Estiliza o logo no cabeçalho */
+.logo {
+  font-size: 1.5em; /* Tamanho maior para destaque */
+  font-weight: bold; /* Negrito para ênfase */
+  text-decoration: none; /* Remove sublinhado */
+  color: #000; /* Cor preta para o texto */
+  border: 2px solid #000000; /* Borda preta de 2px */
+  border-radius: 3px; /* Bordas levemente arredondadas */
+  padding: 5px 15px; /* Padding interno para espaço ao redor do texto */
+  z-index: 11; /* Garante que o logo fique acima de outros elementos */
+}
+
+/* Estiliza a navegação com links */
+.nav-links {
+  display: flex; /* Usa flexbox para alinhar links horizontalmente */
+  gap: 30px; /* Espaçamento de 30px entre links */
+}
+
+/* Estiliza os links da navegação */
+.nav-links a {
+  font-size: 1.3em; /* Tamanho de fonte maior para legibilidade */
+  font-weight: 600; /* Peso médio para destaque */
+  color: #000; /* Cor preta para os links */
+  text-decoration: none; /* Remove sublinhado */
+  padding: 5px 10px; /* Padding para área clicável maior */
+  transition: color 0.3s ease; /* Transição suave para mudança de cor ao passar o mouse */
+}
+
+/* Efeito hover nos links da navegação */
+.nav-links a:hover {
+  color: var(--orange); /* Muda para laranja ao passar o mouse */
+  text-decoration: underline; /* Adiciona sublinhado para feedback visual */
+}
+
+/* Estiliza o botão de menu (hamburger) visível em mobile */
+.menu {
+  display: block; /* Exibe o botão */
+  width: 40px; /* Largura do botão */
+  height: 30px; /* Altura do botão */
+  border: 2px solid #ffffff; /* Borda branca (parece incoerente com o fundo, pode ser um erro) */
+  border-radius: 3px; /* Bordas arredondadas */
+  position: relative; /* Permite posicionar as barras do hamburger */
+  z-index: 11; /* Garante que o menu fique acima de outros elementos */
+}
+
+/* Cria as barras do menu hamburger usando pseudo-elemento */
+.menu::after {
+  content: ""; /* Necessário para pseudo-elemento */
+  display: block; /* Torna o pseudo-elemento um bloco */
+  width: 20px; /* Largura da barra */
+  height: 3px; /* Altura da barra */
+  background: #ffffff; /* Cor branca (deve ser revisada, pois pode não ser visível) */
+  position: absolute; /* Posiciona a barra */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  top: 5px; /* Afasta 5px do topo */
+  left: 0; /* Alinha à esquerda */
+  right: 0; /* Alinha à direita */
+  box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff; /* Cria duas barras adicionais abaixo */
+}
+
+/* Estiliza o diálogo (modal de menu) usado em mobile */
+dialog {
+  display: block; /* Exibe por padrão (controlado por [open]) */
+  position: fixed; /* Posiciona no centro da tela */
+  top: 50%; /* Centraliza verticalmente */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta para o centro exato */
+  transition: opacity 0.5s; /* Transição suave para aparecer/desaparecer */
+  border-radius: 3px; /* Bordas arredondadas */
+  padding: 20px; /* Espaçamento interno */
+  box-shadow: 0 0 10px 0 #000a; /* Sombra suave */
+  background: #fffd; /* Fundo quase branco com leve transparência */
+  border: 0; /* Remove borda padrão */
+  min-width: 60vw; /* Largura mínima de 60% da viewport */
+  z-index: 12; /* Garante que o diálogo fique acima de tudo */
+}
+
+/* Esconde o diálogo quando não está aberto */
+dialog:not([open]) {
+  pointer-events: none; /* Impede interação */
+  opacity: 0; /* Torna invisível */
+}
+
+/* Aplica desfoque ao fundo quando o diálogo está aberto */
+dialog::backdrop {
+  backdrop-filter: blur(0.25rem); /* Desfoque de 0.25rem no fundo */
+}
+
+/* Estiliza os links dentro do diálogo */
+dialog a {
+  font-size: 1.4em; /* Tamanho grande para legibilidade */
+  display: block; /* Cada link ocupa uma linha */
+  text-align: center; /* Centraliza o texto */
+  margin: 10px 15px; /* Margem para espaçamento */
+  padding: 5px; /* Padding para área clicável */
+  font-weight: 600; /* Peso médio para destaque */
+  color: #333; /* Cor cinza escura */
+}
+
+/* Efeito hover nos links do diálogo */
+dialog a:hover {
+  text-decoration: underline; /* Adiciona sublinhado */
+  color: #000; /* Muda para preto */
+}
+
+/* Estiliza a seção principal, que contém galeria e conteúdo */
+.main {
+  display: flex; /* Usa flexbox para alinhar galeria e conteúdo lado a lado */
+  gap: 125px; /* Espaçamento grande entre galeria e conteúdo */
+  min-height: 770px; /* Altura mínima para layout consistente */
+  align-items: center; /* Alinha verticalmente ao centro */
+  padding: 0 10px; /* Padding lateral pequeno */
+}
+
+/* Estiliza a galeria de imagens */
+.gallery {
+  flex: 1; /* Ocupa espaço disponível igualmente ao conteúdo */
+  display: flex; /* Usa flexbox para organizar imagens */
+  flex-direction: column; /* Imagens e miniaturas em coluna */
+  gap: 30px; /* Espaçamento entre imagem principal e miniaturas */
+}
+
+/* Estiliza o contêiner da imagem principal */
+.gallery .main-img {
+  position: relative; /* Permite posicionar imagens absolutas */
+}
+
+/* Esconde todas as imagens da galeria por padrão */
+.gallery .main-img img {
+  display: none; /* Esconde imagens */
+  width: 100%; /* Ocupa toda a largura do contêiner */
+  height: 100%; /* Ocupa toda a altura do contêiner */
+  object-fit: cover; /* Garante que a imagem cubra o espaço sem distorção */
+  border-radius: 20px; /* Bordas arredondadas */
+  position: absolute; /* Sobreposição para troca de imagens */
+  top: 0; /* Alinha ao topo */
+  left: 0; /* Alinha à esquerda */
+}
+
+/* Exibe a imagem ativa */
+.gallery .main-img img.active {
+  display: block; /* Mostra a imagem com classe active */
+}
+
+/* Estiliza a lista de miniaturas */
+.gallery .thumb-list {
+  display: flex; /* Usa flexbox para alinhar miniaturas horizontalmente */
+  justify-content: space-between; /* Espaça igualmente */
+  max-width: 445px; /* Limita a largura */
+  width: 100%; /* Ocupa toda a largura disponível */
+}
+
+/* Estiliza cada item da lista de miniaturas */
+.gallery .thumb-list div {
+  width: 90px; /* Largura fixa para miniaturas */
+  height: 90px; /* Altura fixa para miniaturas */
+  margin: 0 2px; /* Pequena margem lateral */
+  overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse */
+}
+
+/* Estiliza as imagens das miniaturas */
+.gallery .thumb-list img {
+  width: 100%; /* Ocupa toda a largura */
+  height: 100%; /* Ocupa toda a altura */
+  object-fit: cover; /* Garante cobertura sem distorção */
+  border-radius: 10px; /* Bordas arredondadas */
+  cursor: pointer; /* Indica que é clicável */
+}
+
+/* Efeito hover nas miniaturas */
+.gallery .thumb-list img:hover {
+  opacity: 50%; /* Reduz opacidade para feedback visual */
+}
+
+/* Estiliza a miniatura ativa */
+.gallery .thumb-list .active img {
+  opacity: 30%; /* Miniatura ativa fica mais opaca */
+}
+
+/* Borda para a miniatura ativa */
+.gallery .thumb-list .active {
+  border: 2px solid var(--orange); /* Borda laranja */
+  border-radius: 13px; /* Bordas arredondadas para incluir a borda */
+  margin: 0; /* Remove margem para alinhar com a borda */
+}
+
+/* Estiliza o lightbox (modal de imagens ampliadas) */
+.lightbox {
+  display: none; /* Escondido por padrão */
+  position: absolute; /* Sobreposto à página */
+  top: 0; /* Alinha ao topo */
+  left: 0; /* Alinha à esquerda */
+  height: 100vh; /* Ocupa toda a altura da viewport */
+  width: 100vw; /* Ocupa toda a largura da viewport */
+  z-index: 10; /* Fica acima de outros elementos */
+  background: var(--black-with-opacity); /* Fundo preto com opacidade */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+}
+
+/* Exibe o lightbox quando ativo */
+.lightbox.active {
+  display: flex; /* Mostra o lightbox */
+}
+
+/* Limita a largura da galeria no lightbox */
+.lightbox.active .gallery {
+  max-width: 445px; /* Mesma largura da galeria padrão */
+}
+
+/* Estiliza o contêiner da imagem principal no lightbox */
+.lightbox .main-img {
+  position: relative; /* Para posicionamento de setas e ícones */
+}
+
+/* Estiliza as imagens no lightbox */
+.lightbox .main-img img {
+  width: 100%; /* Ocupa toda a largura */
+  height: 100%; /* Ocupa toda a altura */
+  object-fit: cover; /* Garante cobertura sem distorção */
+  border-radius: 20px; /* Bordas arredondadas */
+  position: absolute; /* Sobreposição para troca de imagens */
+  top: 0; /* Alinha ao topo */
+  left: 0; /* Alinha à esquerda */
+  display: none; /* Esconde por padrão */
+}
+
+/* Exibe a imagem ativa no lightbox */
+.lightbox .main-img img.active {
+  display: block; /* Mostra a imagem ativa */
+}
+
+/* Limita a largura da lista de miniaturas no lightbox */
+.lightbox .thumb-list {
+  max-width: 445px; /* Mesma largura da galeria padrão */
+  width: 100%; /* Ocupa toda a largura disponível */
+}
+
+/* Estiliza os itens da lista de miniaturas no lightbox */
+.lightbox .thumb-list div {
+  width: 90px; /* Largura fixa */
+  height: 90px; /* Altura fixa */
+  margin: 0 2px; /* Pequena margem lateral */
+  overflow: hidden; /* Esconde conteúdo excedente */
+}
+
+/* Estiliza as imagens das miniaturas no lightbox */
+.lightbox .thumb-list img {
+  width: 100%; /* Ocupa toda a largura */
+  height: 100%; /* Ocupa toda a altura */
+  object-fit: cover; /* Garante cobertura sem distorção */
+  border-radius: 10px; /* Bordas arredondadas */
+  cursor: pointer; /* Indica que é clicável */
+}
+
+/* Estiliza as setas de navegação no lightbox */
+.lightbox .icon-prev,
+.lightbox .icon-next {
+  position: absolute; /* Posiciona sobre a imagem */
+  height: 60px; /* Altura das setas */
+  width: 60px; /* Largura das setas */
+  display: flex; /* Usa flexbox para centralizar o SVG */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  background-color: var(--white); /* Fundo branco */
+  border-radius: 50%; /* Forma circular */
+  z-index: 11; /* Fica acima da imagem */
+}
+
+/* Cursor pointer nas setas ao passar o mouse */
+.icon-prev:hover,
+.icon-next:hover {
+  cursor: pointer; /* Indica que é clicável */
+}
+
+/* Posiciona a seta de "anterior" */
+.icon-prev {
+  top: 50%; /* Centraliza verticalmente */
+  transform: translate(-50%, -50%); /* Ajusta para ficar metade fora da imagem */
+}
+
+/* Posiciona a seta de "próximo" */
+.icon-next {
+  top: 50%; /* Centraliza verticalmente */
+  right: 0; /* Alinha à direita */
+  transform: translate(50%, -50%); /* Ajusta para ficar metade fora da imagem */
+}
+
+/* Estiliza o ícone de fechar no lightbox */
+.icon-close svg path {
+  fill: var(--white); /* Cor branca para o ícone */
+}
+
+/* Efeito hover no ícone de fechar */
+.icon-close svg path:hover {
+  cursor: pointer; /* Indica que é clicável */
+  fill: var(--orange); /* Muda para laranja */
+}
+
+/* Posiciona o ícone de fechar */
+.icon-close {
+  position: absolute; /* Posiciona sobre o lightbox */
+  right: 0; /* Alinha à direita */
+  top: -40px; /* Acima da imagem */
+}
+
+/* Ajustes para desktop (telas maiores que 768px) */
+@media (min-width: 769px) {
+  .gallery .main-img {
+    width: 545px; /* Largura maior para a imagem principal */
+    height: 445px; /* Altura fixa */
+  }
+
+  .gallery .thumb-list {
+    max-width: 545px; /* Mesma largura da imagem principal */
+  }
+
+  .lightbox.active .gallery {
+    max-width: 545px; /* Limita a galeria no lightbox */
+  }
+
+  .lightbox .main-img {
+    width: 545px; /* Mesma largura da galeria padrão */
+    height: 445px; /* Mesma altura */
+  }
+
+  .lightbox .thumb-list {
+    max-width: 545px; /* Mesma largura da galeria padrão */
+  }
+}
+
+/* Responsividade para mobile (telas até 768px) */
+@media (max-width: 768px) {
+  .main .lightbox .main-img {
+    width: 100vw; /* Ocupa toda a largura da viewport */
+    height: 400px; /* Altura fixa para mobile */
+    position: relative; /* Para posicionamento de setas */
+    overflow: hidden; /* Esconde conteúdo excedente */
+    box-sizing: border-box; /* Inclui bordas no cálculo */
+  }
+
+  .main .lightbox .main-img img {
+    width: 100%; /* Ocupa toda a largura */
+    height: 100%; /* Ocupa toda a altura */
+    object-fit: cover; /* Garante cobertura sem distorção */
+    border-radius: 0; /* Remove bordas arredondadas em mobile */
+    position: absolute; /* Sobreposição para troca de imagens */
+    top: 0; /* Alinha ao topo */
+    left: 0; /* Alinha à esquerda */
+    object-position: center; /* Centraliza a imagem */
+  }
+
+  .main .lightbox .main-img img.active {
+    display: block; /* Mostra a imagem ativa */
+  }
+
+  .main .thumb-list {
+    display: none; /* Esconde miniaturas em mobile */
+  }
+
+  /* Corrige as setas no mobile */
+  .lightbox .icon-prev {
+    left: 15px; /* Posiciona na borda esquerda */
+    height: 45px; /* Tamanho menor */
+    width: 45px; /* Tamanho menor */
+    display: flex; /* Garante visibilidade */
+  }
+
+  .lightbox .icon-next {
+    right: 15px; /* Posiciona na borda direita */
+    height: 45px; /* Tamanho menor */
+    width: 45px; /* Tamanho menor */
+    display: flex; /* Garante visibilidade */
+  }
+}
+
+/* Estiliza a seção de conteúdo (descrição, preço, botões) */
+.content {
+  flex: 1; /* Ocupa espaço disponível igualmente à galeria */
+}
+
+/* Estiliza o subtítulo da empresa */
+.content h3 {
+  font-size: 16px; /* Tamanho pequeno */
+  color: var(--orange); /* Cor laranja para destaque */
+}
+
+/* Estiliza o título do produto */
+.content h2 {
+  font-size: 37px; /* Tamanho grande para destaque */
+  margin: 20px 0 40px 0; /* Espaçamento vertical */
+}
+
+/* Estiliza a descrição do produto */
+.content p {
+  font-size: 16px; /* Tamanho padrão */
+  color: var(--dark-grayish-blue); /* Cor cinza-azulada para legibilidade */
+  margin-bottom: 30px; /* Espaçamento inferior */
+}
+
+/* Estiliza o contêiner do preço */
+.price {
+  display: flex; /* Usa flexbox para alinhar preço e desconto */
+  align-items: center; /* Alinha verticalmente */
+  gap: 15px; /* Espaçamento entre elementos */
+}
+
+/* Estiliza o preço atual */
+.current-price {
+  font-weight: 700; /* Negrito para destaque */
+  font-size: 25px; /* Tamanho grande */
+}
+
+/* Estiliza o desconto (não usado no HTML, pode ser removido) */
+.discount {
+  display: flex; /* Usa flexbox para centralizar */
+  align-items: center; /* Alinha verticalmente */
+  justify-content: center; /* Alinha horizontalmente */
+  padding: 0 6px; /* Padding interno */
+  border-radius: 10%; /* Bordas arredondadas */
+  height: 25px; /* Altura fixa */
+  background-color: var(--pale-orange); /* Fundo laranja claro */
+  font-weight: 700; /* Negrito */
+  color: var(--orange); /* Texto laranja */
+}
+
+/* Estiliza o preço anterior */
+.prev-price {
+  margin: 10px 0 35px 0; /* Espaçamento vertical */
+  font-size: 18px; /* Tamanho menor */
+  color: var(--grayish-blue); /* Cor cinza claro */
+  font-weight: 700; /* Negrito */
+  text-decoration: line-through; /* Texto riscado */
+}
+
+/* Estiliza o contêiner de contador e botão de adicionar ao carrinho */
+.add-to-cart-container {
+  display: flex; /* Usa flexbox para alinhar contador e botão */
+  align-items: center; /* Alinha verticalmente */
+  gap: 15px; /* Espaçamento entre elementos */
+}
+
+/* Estiliza o contador de quantidade */
+.counter {
+  display: flex; /* Usa flexbox para alinhar botões e número */
+  justify-content: space-between; /* Espaça elementos igualmente */
+  align-items: center; /* Alinha verticalmente */
+  border-radius: 15px; /* Bordas arredondadas */
+  width: 150px; /* Largura fixa */
+  height: 55px; /* Altura fixa */
+  background: var(--light-grayish-blue); /* Fundo cinza claro */
+}
+
+/* Estiliza os botões do contador */
+.counter button {
+  width: 50px; /* Largura fixa */
+  height: 100%; /* Ocupa toda a altura */
+  cursor: pointer; /* Indica que é clicável */
+  display: flex; /* Usa flexbox para centralizar SVG */
+  align-items: center; /* Alinha verticalmente */
+  justify-content: center; /* Alinha horizontalmente */
+  background: none; /* Sem fundo */
+  border: none; /* Sem borda */
+}
+
+/* Estiliza o número do contador */
+.counter .count {
+  font-weight: 700; /* Negrito para destaque */
+}
+
+/* Estiliza o botão de adicionar ao carrinho */
+.add-to-cart {
+  color: var(--white); /* Texto branco */
+  background-color: var(--orange); /* Fundo laranja */
+  border: 0px; /* Sem borda */
+  height: 55px; /* Mesma altura do contador */
+  width: 100%; /* Ocupa toda a largura disponível */
+  border-radius: 10px; /* Bordas arredondadas */
+  font-weight: 700; /* Negrito */
+  display: flex; /* Usa flexbox para alinhar ícone e texto */
+  justify-content: center; /* Alinha horizontalmente */
+  align-items: center; /* Alinha verticalmente */
+  gap: 15px; /* Espaçamento entre ícone e texto */
+  cursor: pointer; /* Indica que é clicável */
+  padding: 0 5px; /* Padding lateral */
+}
+
+/* Estiliza o ícone do carrinho */
+.add-to-cart svg path {
+  fill: var(--white); /* Cor branca */
+}
+
+/* Estiliza a seção de informações do produto */
+.product-info {
+  width: 100%; /* Ocupa toda a largura */
+  max-width: 1200px; /* Limita a largura */
+  margin: 0 auto; /* Centraliza */
+  padding: 20px 40px; /* Padding interno */
+  text-align: center; /* Centraliza o texto */
+  margin-top: -120px; /* Sobreposição para ajustar layout (pode causar problemas) */
+}
+
+/* Estiliza a descrição do produto */
+.product-description {
+  margin-bottom: 30px; /* Espaçamento inferior */
+}
+
+/* Estiliza o título da descrição */
+.product-description h3 {
+  font-size: 1.5em; /* Tamanho grande */
+  color: #333; /* Cinza escuro */
+  font-weight: bold; /* Negrito */
+  margin-bottom: 15px; /* Espaçamento inferior */
+}
+
+/* Estiliza o texto da descrição */
+.description-text {
+  font-size: 1.1em; /* Tamanho legível */
+  color: #555; /* Cinza médio */
+  line-height: 1.6; /* Altura de linha para legibilidade */
+  text-align: justify; /* Justifica o texto */
+  max-width: 900px; /* Limita a largura do texto */
+  margin: 0 auto; /* Centraliza */
+}
+
+/* Estiliza o título das avaliações */
+.product-reviews h3 {
+  font-size: 1.5em; /* Tamanho grande */
+  color: #333; /* Cinza escuro */
+  font-weight: bold; /* Negrito */
+  margin-bottom: 15px; /* Espaçamento inferior */
+}
+
+/* Estiliza o texto de "sem avaliações" */
+.no-reviews {
+  font-size: 1.1em; /* Tamanho legível */
+  color: #888; /* Cinza claro */
+}
+
+/* Responsividade para mobile (telas até 768px) */
+@media (max-width: 768px) {
+  .product-info {
+    padding: 20px; /* Reduz padding */
+    margin-top: 10px; /* Remove sobreposição */
+  }
+
+  .product-description h3,
+  .product-reviews h3 {
+    font-size: 1.3em; /* Tamanho menor */
+  }
+
+  .description-text {
+    font-size: 1em; /* Tamanho menor */
+    text-align: left; /* Alinha à esquerda para melhor legibilidade */
+    padding: 0 20px; /* Padding lateral */
+  }
+
+  .no-reviews {
+    font-size: 1em; /* Tamanho menor */
+  }
+
+  .main {
+    flex-direction: column; /* Empilha galeria e conteúdo */
+    gap: 20px; /* Reduz espaçamento */
+    padding: 0; /* Remove padding */
+  }
+
+  .main .default {
+    display: none; /* Esconde galeria padrão em mobile */
+  }
+
+  .lightbox {
+    display: flex; /* Mostra lightbox por padrão em mobile */
+    position: relative; /* Ajusta posicionamento */
+    height: auto; /* Altura automática */
+    width: auto; /* Largura automática */
+    background: none; /* Remove fundo preto */
+  }
+
+  .main .thumb-list {
+    display: none; /* Esconde miniaturas */
+  }
+
+  .main .icon-prev {
+    left: 50px; /* Ajusta posição da seta */
+    height: 45px; /* Tamanho menor */
+    width: 45px; /* Tamanho menor */
+  }
+
+  .main .icon-next {
+    right: 50px; /* Ajusta posição da seta */
+    height: 45px; /* Tamanho menor */
+    width: 45px; /* Tamanho menor */
+  }
+
+  .gallery .main-img img.active {
+    max-width: none; /* Remove limite de largura */
+    max-height: none; /* Remove limite de altura */
+    width: 100vw; /* Ocupa toda a largura */
+    height: auto; /* Altura automática */
+    border-radius: 0; /* Remove bordas arredondadas */
+  }
+
+  .content {
+    padding: 0 20px; /* Padding lateral */
+  }
+
+  .content h2 {
+    margin: 10px 0; /* Reduz margens */
+    font-size: 30px; /* Tamanho menor */
+  }
+
+  .price-info {
+    display: flex; /* Usa flexbox */
+    justify-content: space-between; /* Espaça preço e preço anterior */
+    align-items: center; /* Alinha verticalmente */
+    margin-bottom: 30px; /* Espaçamento inferior */
+  }
+
+  .prev-price {
+    margin: 0; /* Remove margens */
+  }
+
+  .add-to-cart-container {
+    flex-direction: column; /* Empilha contador e botão */
+  }
+
+  .counter {
+    width: 100%; /* Ocupa toda a largura */
+  }
+
+  .counter button {
+    width: 40%; /* Aumenta área clicável */
+  }
+
+  .top-bar {
+    padding: 10px 15px; /* Mais espaço lateral */
+  }
+
+  .sides {
+    width: auto; /* Remove largura fixa */
+    justify-content: flex-start; /* Alinha à esquerda */
+  }
+
+  .logo {
+    font-size: 1.2em; /* Tamanho menor */
+    padding: 5px 10px; /* Padding menor */
+  }
+
+  .menu {
+    display: block !important; /* Garante visibilidade do menu */
+    position: absolute; /* Posiciona no canto */
+    right: 15px; /* Alinha à direita */
+    top: 15px; /* Alinha ao topo */
+  }
+
+  .nav-links {
+    display: none; /* Esconde links, pois o menu hamburger assume */
+  }
+}
+
+/* Responsividade para telas muito pequenas (até 480px) */
+@media (max-width: 480px) {
+  .product-info {
+    padding: 10px; /* Reduz padding ainda mais */
+  }
+
+  .product-description h3,
+  .product-reviews h3 {
+    font-size: 1.2em; /* Tamanho ainda menor */
+  }
+
+  .description-text {
+    font-size: 0.9em; /* Tamanho menor */
+  }
+
+  .no-reviews {
+    font-size: 0.9em; /* Tamanho menor */
+  }
+
+  .logo {
+    font-size: 1em; /* Tamanho ainda menor */
+    padding: 3px 8px; /* Padding menor */
+  }
+
+  .menu {
+    width: 35px; /* Tamanho menor */
+    height: 25px; /* Tamanho menor */
+    right: 10px; /* Ajusta posição */
+    top: 10px; /* Ajusta posição */
+  }
+
+  .menu::after {
+    width: 18px; /* Barra menor */
+    height: 2px; /* Barra mais fina */
+    top: 4px; /* Ajusta posição */
+    box-shadow: 0 7px 0 0 #000000, 0 14px 0 0 #000000; /* Ajusta sombras para barras */
+  }
+}
+
+/* Esconde o menu hamburger e diálogo em desktop */
+@media (min-width: 769px) {
+  .menu {
+    display: none !important; /* Esconde o menu hamburger */
+  }
+
+  dialog {
+    display: none !important; /* Esconde o diálogo */
+    visibility: hidden !important; /* Garante invisibilidade */
+    opacity: 0 !important; /* Torna invisível */
+  }
+}
+
+/* Estiliza a seção de produtos relacionados */
+.related-products-section {
+  padding: 80px 0; /* Espaçamento vertical */
+  background: #f9f9f9; /* Fundo cinza claro */
+}
+
+/* Centraliza e limita o conteúdo */
+.related-products-section .related-products-container {
+  max-width: 1200px; /* Largura máxima */
+  margin: 0 auto; /* Centraliza */
+  padding: 0 20px; /* Padding lateral */
+}
+
+/* Estiliza o cabeçalho da seção */
+.related-products-section .related-header {
+  display: flex; /* Usa flexbox */
+  justify-content: space-between; /* Espaça título e link */
+  align-items: center; /* Alinha verticalmente */
+  margin-bottom: 40px; /* Espaçamento inferior */
+}
+
+/* Estiliza o título da seção */
+.related-products-section .related-title {
+  font-size: 2.5rem; /* Tamanho grande */
+  font-weight: 700; /* Negrito */
+  color: #1d2026; /* Cor azul escura */
+}
+
+/* Estiliza o link "Ver todos" */
+.related-products-section .view-all-link {
+  font-size: 1.1rem; /* Tamanho legível */
+  color: #FF7E1B; /* Laranja */
+  text-decoration: none; /* Remove sublinhado */
+  font-weight: 600; /* Peso médio */
+  transition: color 0.3s ease; /* Transição suave para hover */
+}
+
+/* Efeito hover no link "Ver todos" */
+.related-products-section .view-all-link:hover {
+  color: #e66b0a; /* Laranja mais escuro */
+}
+
+/* Estiliza a grade de cards */
+.related-products-section .related-products-grid {
+  display: grid; /* Usa grid para layout */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Colunas adaptáveis */
+  gap: 25px; /* Espaçamento entre cards */
+}
+
+/* Estiliza cada card */
+.related-products-section .related-card {
+  display: flex; /* Usa flexbox */
+  flex-direction: column; /* Conteúdo em coluna */
+  background: #fff; /* Fundo branco */
+  border-radius: 12px; /* Bordas arredondadas */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  overflow: hidden; /* Esconde conteúdo excedente */
+  text-decoration: none; /* Remove sublinhado do link */
+  color: inherit; /* Herda cor do pai */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições para hover */
+}
+
+/* Efeito hover nos cards */
+.related-products-section .related-card:hover {
+  transform: translateY(-8px); /* Eleva o card */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra mais forte */
+}
+
+/* Estiliza a imagem do card */
+.related-products-section .card-image {
+  position: relative; /* Para posicionar o badge */
+  width: 100%; /* Ocupa toda a largura */
+  height: 200px; /* Altura fixa */
+}
+
+/* Estiliza a imagem dentro do card */
+.related-products-section .card-image img {
+  width: 100%; /* Ocupa toda a largura */
+  height: 100%; /* Ocupa toda a altura */
+  object-fit: cover; /* Garante cobertura sem distorção */
+}
+
+/* Estiliza o badge do card */
+.related-products-section .card-badge {
+  position: absolute; /* Posiciona sobre a imagem */
+  top: 10px; /* Afasta 10px do topo */
+  right: 10px; /* Afasta 10px da direita */
+  background: #FF7E1B; /* Fundo laranja */
+  color: #fff; /* Texto branco */
+  font-size: 0.85rem; /* Tamanho pequeno */
+  font-weight: 600; /* Peso médio */
+  padding: 5px 10px; /* Padding interno */
+  border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Estiliza o conteúdo do card */
+.related-products-section .card-content {
+  padding: 20px; /* Padding interno */
+  display: flex; /* Usa flexbox */
+  flex-direction: column; /* Conteúdo em coluna */
+  gap: 10px; /* Espaçamento entre elementos */
+}
+
+/* Estiliza o título do card */
+.related-products-section .card-content h4 {
+  font-size: 1.5rem; /* Tamanho grande */
+  font-weight: 600; /* Peso médio */
+  color: #1d2026; /* Azul escura */
+  margin: 0; /* Remove margens */
+}
+
+/* Estiliza a descrição do card */
+.related-products-section .card-description {
+  font-size: 0.95rem; /* Tamanho pequeno */
+  color: #69707d; /* Cinza-azulado */
+  line-height: 1.6; /* Altura de linha para legibilidade */
+  margin: 0; /* Remove margens */
+}
+
+/* Estiliza o preço do card */
+.related-products-section .card-price {
+  font-size: 1rem; /* Tamanho legível */
+  color: #1d2026; /* Azul escura */
+  font-weight: 500; /* Peso médio */
+  margin: 0; /* Remove margens */
+}
+
+/* Estiliza o preço em destaque */
+.related-products-section .card-price strong {
+  color: #FF7E1B; /* Laranja */
+}
+
+/* Estiliza o botão do card */
+.related-products-section .card-button {
+  background-color: #FF7E1B; /* Fundo laranja */
+  color: #fff; /* Texto branco */
+  font-size: 1rem; /* Tamanho legível */
+  font-weight: 600; /* Peso médio */
+  padding: 10px; /* Padding interno */
+  border: none; /* Sem borda */
+  border-radius: 8px; /* Bordas arredondadas */
+  cursor: pointer; /* Indica que é clicável */
+  transition: background-color 0.3s ease; /* Transição suave */
+  align-self: flex-start; /* Alinha à esquerda */
+}
+
+/* Efeito hover no botão */
+.related-products-section .card-button:hover {
+  background-color: #e66b0a; /* Laranja mais escuro */
+}
+
+/* Responsividade para mobile (telas até 768px) */
+@media (max-width: 768px) {
+  .related-products-section {
+    padding: 40px 0; /* Reduz padding */
+  }
+
+  .related-products-section .related-title {
+    font-size: 2rem; /* Tamanho menor */
+  }
+
+  .related-products-section .view-all-link {
+    font-size: 1rem; /* Tamanho menor */
+  }
+
+  .related-products-section .card-image {
+    height: 160px; /* Altura menor */
+  }
+
+  .related-products-section .card-content {
+    padding: 15px; /* Padding menor */
+  }
+
+  .related-products-section .card-content h4 {
+    font-size: 1.3rem; /* Tamanho menor */
+  }
+
+  .related-products-section .card-description {
+    font-size: 0.9rem; /* Tamanho menor */
+  }
+
+  .related-products-section .card-button {
+    font-size: 0.9rem; /* Tamanho menor */
+    padding: 8px; /* Padding menor */
+    width: 100%; /* Ocupa toda a largura */
+    text-align: center; /* Centraliza texto */
+  }
+}
+
+/* Estiliza o modal de reserva */
+.modal {
+  display: none; /* Escondido por padrão */
+  position: fixed; /* Posiciona no centro da tela */
+  top: 50%; /* Centraliza verticalmente */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta para o centro exato */
+  background: var(--white); /* Fundo branco */
+  padding: clamp(15px, 4vw, 20px); /* Padding responsivo */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 4px 20px var(--black-with-opacity); /* Sombra suave */
+  z-index: 1000; /* Fica acima de tudo */
+  width: clamp(300px, 90%, 500px); /* Largura responsiva */
+  max-height: 90vh; /* Limita altura para evitar corte */
+  overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+  transition: opacity 0.3s ease; /* Transição suave para aparecer */
+  opacity: 0; /* Invisível por padrão */
+}
+
+/* Exibe o modal quando ativo */
+.modal.active {
+  display: block; /* Mostra o modal */
+  opacity: 1; /* Torna visível */
+}
+
+/* Estiliza o fundo do modal */
+.modal-backdrop {
+  display: none; /* Escondido por padrão */
+  position: fixed; /* Cobre toda a tela */
+  top: 0; /* Alinha ao topo */
+  left: 0; /* Alinha à esquerda */
+  width: 100%; /* Ocupa toda a largura */
+  height: 100%; /* Ocupa toda a altura */
+  background: var(--black-with-opacity); /* Fundo preto com opacidade */
+  backdrop-filter: blur(2px); /* Desfoque no fundo */
+  z-index: 999; /* Fica abaixo do modal */
+}
+
+/* Exibe o fundo quando o modal está ativo */
+.modal.active + .modal-backdrop {
+  display: block; /* Mostra o fundo */
+}
+
+/* Estiliza o cabeçalho do modal */
+.modal-header {
+  display: flex; /* Usa flexbox */
+  justify-content: space-between; /* Espaça título e botão de fechar */
+  align-items: center; /* Alinha verticalmente */
+  margin-bottom: clamp(15px, 4vw, 20px); /* Espaçamento responsivo */
+}
+
+/* Estiliza o título do modal */
+.modal-header h2 {
+  font-size: clamp(1.3em, 4vw, 1.5em); /* Tamanho responsivo */
+  color: var(--very-dark-blue); /* Azul escuro */
+}
+
+/* Estiliza o botão de fechar do modal */
+.modal-close {
+  background: none; /* Sem fundo */
+  border: none; /* Sem borda */
+  font-size: clamp(1.2em, 4vw, 1.5em); /* Tamanho responsivo */
+  cursor: pointer; /* Indica que é clicável */
+  color: var(--dark-grayish-blue); /* Cinza-azulado */
+  transition: color 0.3s ease; /* Transição suave */
+}
+
+/* Efeito hover no botão de fechar */
+.modal-close:hover {
+  color: var(--orange); /* Laranja */
+}
+
+/* Esconde etapas do modal por padrão */
+.modal-step {
+  display: none; /* Escondido */
+}
+
+/* Exibe a etapa ativa */
+.modal-step.active {
+  display: block; /* Mostra a etapa */
+}
+
+/* Estiliza os grupos de formulário */
+.form-group {
+  margin-bottom: clamp(10px, 3vw, 15px); /* Espaçamento responsivo */
+}
+
+/* Estiliza os rótulos do formulário */
+.form-group label {
+  display: block; /* Ocupa toda a linha */
+  font-size: clamp(0.9em, 3vw, 1em); /* Tamanho responsivo */
+  color: var(--very-dark-blue); /* Azul escuro */
+  margin-bottom: 5px; /* Espaçamento inferior */
+}
+
+/* Estiliza os campos de entrada do formulário */
+.form-group input {
+  width: 100%; /* Ocupa toda a largura */
+  padding: clamp(8px, 2vw, 10px); /* Padding responsivo */
+  border: 1px solid var(--grayish-blue); /* Borda cinza clara */
+  border-radius: 5px; /* Bordas arredondadas */
+  font-size: clamp(0.9em, 3vw, 1em); /* Tamanho responsivo */
+  color: var(--very-dark-blue); /* Texto azul escuro */
+  font-family: "Kumbh Sans", sans-serif; /* Fonte consistente */
+}
+
+/* Estiliza o foco nos campos de entrada */
+.form-group input:focus {
+  outline: none; /* Remove contorno padrão */
+  border-color: var(--orange); /* Borda laranja */
+}
+
+/* Estiliza campos com erro */
+.form-group input.error {
+  border-color: red; /* Borda vermelha */
+}
+
+/* Estiliza mensagens de erro */
+.form-group .error-message {
+  color: red; /* Texto vermelho */
+  font-size: clamp(0.8em, 2.5vw, 0.9em); /* Tamanho responsivo */
+  margin-top: 5px; /* Espaçamento superior */
+  display: none; /* Escondido por padrão */
+}
+
+/* Exibe mensagens de erro quando aplicável */
+.form-group.error .error-message {
+  display: block; /* Mostra mensagem */
+}
+
+/* Estiliza o resumo na etapa 2 do modal */
+.summary {
+  margin-bottom: clamp(15px, 4vw, 20px); /* Espaçamento responsivo */
+}
+
+/* Estiliza os parágrafos do resumo */
+.summary p {
+  font-size: clamp(0.9em, 3vw, 1em); /* Tamanho responsivo */
+  color: var(--dark-grayish-blue); /* Cinza-azulado */
+  margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+/* Estiliza o nome do produto no resumo */
+.product-name {
+  font-size: clamp(1em, 3.5vw, 1.2em); /* Tamanho responsivo */
+  font-weight: 700; /* Negrito */
+  color: var(--very-dark-blue); /* Azul escuro */
+}
+
+/* Estiliza a seção de QR code */
+.qr-code {
+  text-align: center; /* Centraliza conteúdo */
+  margin: clamp(15px, 4vw, 20px) 0; /* Espaçamento vertical responsivo */
+}
+
+/* Estiliza a imagem do QR code */
+.qr-code img {
+  max-width: clamp(120px, 30vw, 150px); /* Tamanho responsivo */
+  width: 100%; /* Ocupa largura disponível */
+  height: auto; /* Altura proporcional */
+  margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+/* Estiliza os controles de quantidade */
+.quantity-control {
+  display: flex; /* Usa flexbox */
+  align-items: center; /* Alinha verticalmente */
+  gap: clamp(8px, 2vw, 10px); /* Espaçamento responsivo */
+  margin-bottom: clamp(15px, 4vw, 20px); /* Espaçamento inferior responsivo */
+}
+
+/* Estiliza os botões de quantidade */
+.quantity-control button {
+  background: var(--light-grayish-blue); /* Fundo cinza claro */
+  border: none; /* Sem borda */
+  padding: clamp(8px, 2vw, 10px); /* Padding responsivo */
+  font-size: clamp(1em, 3vw, 1.2em); /* Tamanho responsivo */
+  cursor: pointer; /* Indica que é clicável */
+  border-radius: 5px; /* Bordas arredondadas */
+  transition: background 0.3s ease; /* Transição suave */
+}
+
+/* Efeito hover nos botões de quantidade */
+.quantity-control button:hover {
+  background: var(--pale-orange); /* Fundo laranja claro */
+}
+
+/* Estiliza o campo de quantidade */
+.quantity-control input {
+  width: clamp(50px, 15vw, 60px); /* Largura responsiva */
+  text-align: center; /* Centraliza texto */
+  border: 1px solid var(--grayish-blue); /* Borda cinza clara */
+  border-radius: 5px; /* Bordas arredondadas */
+  padding: clamp(8px, 2vw, 10px); /* Padding responsivo */
+  font-size: clamp(0.9em, 3vw, 1em); /* Tamanho responsivo */
+  font-family: "Kumbh Sans", sans-serif; /* Fonte consistente */
+}
+
+/* Estiliza as opções de pagamento */
+.payment-option {
+  margin-bottom: clamp(15px, 4vw, 20px); /* Espaçamento responsivo */
+  display: flex; /* Usa flexbox */
+  flex-direction: column; /* Empilha opções */
+  gap: clamp(8px, 2vw, 10px); /* Espaçamento responsivo */
+}
+
+/* Estiliza os rótulos das opções de pagamento */
+.payment-option label {
+  display: flex; /* Usa flexbox */
+  align-items: center; /* Alinha verticalmente */
+  gap: 10px; /* Espaçamento entre rádio e texto */
+  font-size: clamp(0.9em, 3vw, 1em); /* Tamanho responsivo */
+  color: var(--very-dark-blue); /* Azul escuro */
+  margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+/* Estiliza os inputs de rádio */
+.payment-option input[type="radio"] {
+  accent-color: var(--orange); /* Cor laranja para rádio */
+}
+
+/* Estiliza o preço total */
+.total-price {
+  font-size: clamp(1em, 3.5vw, 1.2em); /* Tamanho responsivo */
+  font-weight: 700; /* Negrito */
+  color: var(--very-dark-blue); /* Azul escuro */
+  margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+/* Estiliza os botões do modal */
+.modal-buttons {
+  display: flex; /* Usa flexbox */
+  justify-content: space-between; /* Espaça botões */
+  gap: clamp(8px, 2vw, 10px); /* Espaçamento responsivo */
+}
+
+/* Estiliza os botões principais do modal */
+.modal-btn {
+  background: var(--orange); /* Fundo laranja */
+  color: var(--white); /* Texto branco */
+  border: none; /* Sem borda */
+  padding: clamp(8px, 2vw, 10px) clamp(15px, 4vw, 20px); /* Padding responsivo */
+  font-size: clamp(0.9em, 3vw, 1em); /* Tamanho responsivo */
+  font-weight: 700; /* Negrito */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Indica que é clicável */
+  transition: background 0.3s ease; /* Transição suave */
+  flex: 1; /* Ocupa espaço disponível */
+  font-family: "Kumbh Sans", sans-serif; /* Fonte consistente */
+}
+
+/* Efeito hover nos botões principais */
+.modal-btn:hover {
+  background: hsl(26, 100%, 45%); /* Laranja mais escuro */
+}
+
+/* Estiliza os botões secundários */
+.modal-btn.secondary {
+  background: var(--grayish-blue); /* Fundo cinza claro */
+}
+
+/* Efeito hover nos botões secundários */
+.modal-btn.secondary:hover {
+  background: hsl(220, 14%, 65%); /* Cinza mais claro */
+}
+
+/* Estiliza as instruções do QR code */
+.qr-code-instructions {
+  font-size: clamp(0.8em, 2.5vw, 0.9em); /* Tamanho responsivo */
+  color: var(--dark-grayish-blue); /* Cinza-azulado */
+  line-height: 1.5; /* Altura de linha para legibilidade */
+}
+
+/* Estiliza spans dentro das instruções */
+.qr-code-instructions span {
+  font-weight: 700; /* Negrito para destaque */
+  color: var(--very-dark-blue); /* Azul escuro */
+}
+
+/* Estiliza links nas instruções */
+.qr-code-instructions a {
+  color: var(--orange); /* Laranja */
+  text-decoration: none; /* Remove sublinhado */
+}
+
+/* Efeito hover nos links das instruções */
+.qr-code-instructions a:hover {
+  text-decoration: underline; /* Adiciona sublinhado */
+}
+
+/* Media Queries para Responsividade do Modal */
+@media (max-width: 1024px) {
+  .modal {
+    width: clamp(280px, 95%, 450px); /* Ajusta largura */
+    padding: clamp(12px, 3vw, 15px); /* Reduz padding */
+  }
+
+  .modal-header h2 {
+    font-size: clamp(1.2em, 3.5vw, 1.4em); /* Tamanho menor */
+  }
+
+  .modal-close {
+    font-size: clamp(1.1em, 3.5vw, 1.3em); /* Tamanho menor */
+  }
+
+  .qr-code img {
+    max-width: clamp(100px, 25vw, 130px); /* Reduz tamanho do QR code */
+  }
+}
+
+@media (max-width: 768px) {
+  .modal {
+    width: clamp(260px, 90%, 400px); /* Ajusta largura */
+    padding: clamp(10px, 2.5vw, 12px); /* Reduz padding */
+  }
+
+  .modal-header h2 {
+    font-size: clamp(1.1em, 3vw, 1.3em); /* Tamanho menor */
+  }
+
+  .modal-close {
+    font-size: clamp(1em, 3vw, 1.2em); /* Tamanho menor */
+  }
+
+  .form-group label,
+  .form-group input,
+  .summary p,
+  .total-price,
+  .qr-code-instructions {
+    font-size: clamp(0.85em, 2.5vw, 0.9em); /* Tamanho menor */
+  }
+
+  .quantity-control button {
+    padding: clamp(6px, 1.5vw, 8px); /* Reduz padding */
+    font-size: clamp(0.9em, 2.5vw, 1em); /* Tamanho menor */
+  }
+
+  .quantity-control input {
+    width: clamp(45px, 12vw, 50px); /* Reduz largura */
+  }
+
+  .qr-code img {
+    max-width: clamp(90px, 22vw, 120px); /* Reduz tamanho do QR code */
+  }
+}
+
+@media (max-width: 576px) {
+  .modal {
+    width: clamp(240px, 95%, 350px); /* Ajusta largura */
+    padding: clamp(8px, 2vw, 10px); /* Reduz padding */
+  }
+
+  .modal-header h2 {
+    font-size: clamp(1em, 3vw, 1.2em); /* Tamanho menor */
+  }
+
+  .modal-close {
+    font-size: clamp(0.9em, 2.5vw, 1.1em); /* Tamanho menor */
+  }
+
+  .form-group label,
+  .form-group input,
+  .summary p,
+  .total-price,
+  .qr-code-instructions {
+    font-size: clamp(0.8em, 2.5vw, 0.85em); /* Tamanho menor */
+  }
+
+  .modal-buttons {
+    flex-direction: column; /* Empilha botões */
+    gap: clamp(6px, 1.5vw, 8px); /* Reduz espaçamento */
+  }
+
+  .modal-btn {
+    width: 100%; /* Ocupa toda a largura */
+    padding: clamp(6px, 1.5vw, 8px) clamp(10px, 3vw, 15px); /* Reduz padding */
+    font-size: clamp(0.85em, 2.5vw, 0.9em); /* Tamanho menor */
+  }
+
+  .quantity-control button {
+    padding: clamp(5px, 1.5vw, 6px); /* Reduz padding */
+    font-size: clamp(0.85em, 2.5vw, 0.9em); /* Tamanho menor */
+  }
+
+  .quantity-control input {
+    width: clamp(40px, 10vw, 45px); /* Reduz largura */
+  }
+
+  .qr-code img {
+    max-width: clamp(80px, 20vw, 100px); /* Reduz tamanho do QR code */
+  }
+}
+
+@media (max-width: 360px) {
+  .modal {
+    width: clamp(220px, 98%, 320px); /* Ajusta largura */
+    padding: clamp(6px, 1.5vw, 8px); /* Reduz padding */
+  }
+
+  .modal-header h2 {
+    font-size: clamp(0.9em, 2.5vw, 1.1em); /* Tamanho menor */
+  }
+
+  .modal-close {
+    font-size: clamp(0.85em, 2.5vw, 1em); /* Tamanho menor */
+  }
+
+  .form-group label,
+  .form-group input,
+  .summary p,
+  .total-price,
+  .qr-code-instructions {
+    font-size: clamp(0.75em, 2vw, 0.8em); /* Tamanho menor */
+  }
+
+  .modal-btn {
+    padding: clamp(5px, 1.5vw, 6px) clamp(8px, 2vw, 12px); /* Reduz padding */
+    font-size: clamp(0.8em, 2vw, 0.85em); /* Tamanho menor */
+  }
+
+  .quantity-control button {
+    padding: clamp(4px, 1vw, 5px); /* Reduz padding */
+    font-size: clamp(0.8em, 2vw, 0.85em); /* Tamanho menor */
+  }
+
+  .quantity-control input {
+    width: clamp(35px, 10vw, 40px); /* Reduz largura */
+  }
+
+  .qr-code img {
+    max-width: clamp(70px, 18vw, 90px); /* Reduz tamanho do QR code */
+  }
+}
+
+/* Estiliza a seção de promoções */
+.promotions-section {
+  padding: 80px 0; /* Espaçamento vertical */
+  background: linear-gradient(180deg, #ffffff 0%, #f0f8ff 100%); /* Gradiente de branco para azul claro */
+}
+
+/* Centraliza e limita o conteúdo */
+.promotions-section .promotions-container {
+  max-width: 1200px; /* Largura máxima */
+  margin: 0 auto; /* Centraliza */
+  padding: 0 20px; /* Padding lateral */
+}
+
+/* Estiliza o título da seção */
+.promotions-section .promotions-title {
+  font-size: 2.5rem; /* Tamanho grande */
+  font-weight: 700; /* Negrito */
+  color: #1d2026; /* Azul escura */
+  text-align: center; /* Centraliza */
+  margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Estiliza a introdução da seção */
+.promotions-section .promotions-intro {
+  font-size: 1.2rem; /* Tamanho legível */
+  color: #69707d; /* Cinza-azulado */
+  text-align: center; /* Centraliza */
+  max-width: 800px; /* Limita a largura */
+  margin: 0 auto 50px; /* Centraliza e adiciona espaçamento */
+  line-height: 1.6; /* Altura de linha para legibilidade */
+}
+
+/* Estiliza a grade de promoções */
+.promotions-section .promotions-grid {
+  display: grid; /* Usa grid */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Colunas adaptáveis */
+  gap: 25px; /* Espaçamento entre cards */
+}
+
+/* Estiliza cada card de promoção */
+.promotions-section .promotion-card {
+  display: flex; /* Usa flexbox */
+  align-items: flex-start; /* Alinha ao topo */
+  background: #fff; /* Fundo branco */
+  border-radius: 12px; /* Bordas arredondadas */
+  padding: 20px; /* Padding interno */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições para hover */
+}
+
+/* Efeito hover nos cards */
+.promotions-section .promotion-card:hover {
+  transform: translateY(-8px); /* Eleva o card */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra mais forte */
+}
+
+/* Estiliza o ícone da promoção */
+.promotions-section .promotion-icon {
+  margin-right: 15px; /* Espaçamento à direita */
+  flex-shrink: 0; /* Impede que o ícone encolha */
+}
+
+/* Estiliza o SVG do ícone */
+.promotions-section .promotion-icon svg {
+  width: 36px; /* Tamanho fixo */
+  height: 36px; /* Tamanho fixo */
+}
+
+/* Estiliza o título da promoção */
+.promotions-section .promotion-content h4 {
+  font-size: 1.5rem; /* Tamanho grande */
+  font-weight: 600; /* Peso médio */
+  color: #1d2026; /* Azul escura */
+  margin-bottom: 8px; /* Espaçamento inferior */
+}
+
+/* Estiliza o texto da promoção */
+.promotions-section .promotion-content p {
+  font-size: 0.95rem; /* Tamanho pequeno */
+  color: #69707d; /* Cinza-azulado */
+  line-height: 1.6; /* Altura de linha para legibilidade */
+}
+
+/* Estiliza o contêiner do botão CTA */
+.promotions-section .promotions-cta {
+  text-align: center; /* Centraliza */
+  margin-top: 40px; /* Espaçamento superior */
+}
+
+/* Estiliza o botão CTA */
+.promotions-section .promotions-cta-button {
+  background-color: #FF7E1B; /* Fundo laranja */
+  color: #fff; /* Texto branco */
+  font-size: 1.1rem; /* Tamanho legível */
+  font-weight: 600; /* Peso médio */
+  padding: 12px 28px; /* Padding interno */
+  border: none; /* Sem borda */
+  border-radius: 8px; /* Bordas arredondadas */
+  cursor: pointer; /* Indica que é clicável */
+  transition: background-color 0.3s ease; /* Transição suave */
+}
+
+/* Efeito hover no botão CTA */
+.promotions-section .promotions-cta-button:hover {
+  background-color: #e66b0a; /* Laranja mais escuro */
+}
+
+/* Responsividade para mobile (telas até 768px) */
+@media (max-width: 768px) {
+  .promotions-section {
+    padding: 40px 0; /* Reduz padding */
+  }
+
+  .promotions-section .promotions-title {
+    font-size: 2rem; /* Tamanho menor */
+  }
+
+  .promotions-section .promotions-intro {
+    font-size: 1rem; /* Tamanho menor */
+  }
+
+  .promotions-section .promotion-card {
+    flex-direction: column; /* Empilha ícone e conteúdo */
+    align-items: center; /* Centraliza */
+    text-align: center; /* Centraliza texto */
+    padding: 15px; /* Padding menor */
+  }
+
+  .promotions-section .promotion-icon {
+    margin-right: 0; /* Remove margem lateral */
+    margin-bottom: 12px; /* Adiciona margem inferior */
+  }
+
+  .promotions-section .promotion-content h4 {
+    font-size: 1.3rem; /* Tamanho menor */
+  }
+
+  .promotions-section .promotion-content p {
+    font-size: 0.9rem; /* Tamanho menor */
+  }
+
+  .promotions-section .promotions-cta-button {
+    font-size: 1rem; /* Tamanho menor */
+    padding: 10px 20px; /* Padding menor */
+  }
+}
