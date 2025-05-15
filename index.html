@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <!-- Metadados -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Estação de esqui, 31 temporada, O melhor refúgio em resort de montanha, Descubra a felicidade na neve, a aventura espera por você!">
+  <meta name="description" content="">
+  <meta name="theme-color" content="#2089ec">
+  <meta property="og:title" content="Página Inicial">
+  <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/">
+  <meta name="generator" content="Nicepage 7.7.3, santos.com">
+  <title>Página Inicial</title>
+
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="css/santospage.css" media="screen">
+  <link rel="stylesheet" href="css/style.css" media="screen">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+  <!-- Google Fonts -->
+  <!-- Nota: Considere consolidar fontes duplicadas (ex.: Palanquin Dark aparece múltiplas vezes) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Palanquin+Dark:400,500,600,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:100,200,300,400,500,600,700,800,900|Palanquin+Dark:400,500,600,700">
+  <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,CHARSET=500,500i,600,600i,700,700i,800,800i">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+
+  <!-- Scripts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script class="u-script" type="text/javascript" src="jquery.js" defer></script>
+  <script class="u-script" type="text/javascript" src="nicepage.js" defer></script>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script class="u-script" type="text/javascript" src="js/index.js" defer></script>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "",
+      "logo": "images/default-logo.png"
+    }
+  </script>
+</head>
+<body data-home-page="Página-Inicial.html" data-home-page-title="Página Inicial" data-path-to-root="./" data-include-products="false" class="u-body u-overlap u-overlap-contrast u-overlap-transparent u-xl-mode" data-lang="pt">
+  <!-- Cabeçalho -->
+  <header class="u-header" id="sec-fdf1">
+    <div class="u-sheet u-sheet-1">
+      <!-- Logotipo -->
+      <a href="./" class="u-logo">
+        <img src="./images/LOGO.png" alt="Conexão Club do Turista" class="u-logo-image">
+      </a>
+      <!-- Menu Hambúrguer -->
+      <div class="menu-collapse">
+        <a href="#" class="u-hamburger-link" id="hamburger-toggle">
+          <span class="hamburger-line top"></span>
+          <span class="hamburger-line middle"></span>
+          <span class="hamburger-line bottom"></span>
+        </a>
+      </div>
+      <!-- Menu Principal -->
+      <nav class="u-nav-container">
+        <ul class="u-nav u-nav-1">
+          <li class="u-nav-item"><a class="u-nav-link" href="./">Home</a></li>
+          <li class="u-nav-item"><a class="u-nav-link" href="parceiros.html">Parceiros</a></li>
+          <li class="u-nav-item"><a class="u-nav-link" href="passeios.html">Passeios</a></li>
+          <li class="u-nav-item"><a class="u-nav-link" href="Pricing-Page.html">Pricing</a></li>
+          <li class="u-nav-item"><a class="u-nav-link" href="Contato.html">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- Menu Offcanvas -->
+      <div class="u-nav-container-collapse" id="mobile-menu">
+        <div class="u-sidenav">
+          <div class="u-menu-close" id="menu-close">
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="u-nav u-nav-2">
+            <li class="u-nav-item"><a class="u-nav-link" href="./">Home</a></li>
+            <li class="u-nav-item"><a class="u-nav-link" href="parceiros.html">Parceiros</a></li>
+            <li class="u-nav-item"><a class="u-nav-link" href="passeios.html">Passeios</a></li>
+            <li class="u-nav-item"><a class="u-nav-link" href="Pricing-Page.html">Pricing</a></li>
+            <li class="u-nav-item"><a class="u-nav-link" href="Contato.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="u-menu-overlay" id="menu-overlay"></div>
+      </div>
+    </div>
+  </header>
+
+  <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const hamburgerToggle = document.getElementById('hamburger-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuClose = document.getElementById('menu-close');
+  const menuOverlay = document.getElementById('menu-overlay');
+  const navLinks = document.querySelectorAll('.u-nav-2 .u-nav-link');
+
+  let isAnimating = false;
+
+  function toggleMenu() {
+    if (isAnimating) return;
+    isAnimating = true;
+
+    const isOpen = mobileMenu.classList.contains('u-menu-open');
+    mobileMenu.classList.toggle('u-menu-open');
+    hamburgerToggle.classList.toggle('active');
+    menuOverlay.style.display = isOpen ? 'none' : 'block';
+
+    // Animação dos links
+    navLinks.forEach((link, index) => {
+      if (!isOpen) {
+        link.style.transitionDelay = `${index * 0.1}s`;
+        link.classList.add('visible');
+      } else {
+        link.style.transitionDelay = '0s';
+        link.classList.remove('visible');
+      }
+    });
+
+    // Resetar animação após completar
+    setTimeout(() => {
+      isAnimating = false;
+    }, 400);
+  }
+
+  hamburgerToggle.addEventListener('click', function (e) {
+    e.preventDefault();
+    toggleMenu();
+  });
+
+  menuClose.addEventListener('click', toggleMenu);
+  menuOverlay.addEventListener('click', toggleMenu);
+
+  // Fechar menu ao clicar em um link
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (mobileMenu.classList.contains('u-menu-open')) {
+        toggleMenu();
+      }
+    });
+  });
+});
+
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('.u-header');
+  if (window.scrollY > 50) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+  </script>
+  
+
+
+<!-- Seção 2: Nossos Parceiros -->
+<section class="u-clearfix u-section-2" id="sec-784c">
+  <div class="u-clearfix u-sheet u-valign-bottom-lg u-valign-bottom-md u-valign-bottom-sm u-sheet-1">
+    <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+      <div class="u-layout">
+        <div class="u-layout-row">
+          
+          <!-- Coluna Esquerda com título e chamada -->
+          <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+            <div class="u-container-layout u-valign-bottom-lg u-container-layout-1">
+              <h2 class="u-text u-text-palette-2-base u-text-1" data-animation-name="customAnimationIn" data-animation-duration="2000" data-animation-delay="0">
+                Nossos Parceiros
+              </h2>
+              <h4 class="u-text u-text-2">
+                <strong> Aproveite vantagens incríveis com quem está com a gente! </strong>
+              </h4>
+              <a href="#parceiros" class="u-btn u-button-style u-btn-1">Conhecer</a>
+            </div>
+          </div>
+
+          <!-- Coluna Direita com os destaques -->
+          <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+            <div class="u-container-layout u-valign-middle-lg u-valign-middle-xl u-valign-top-md u-valign-top-sm u-container-layout-2">
+              <div class="u-expanded-width-sm u-expanded-width-xs u-list u-list-1">
+                <div class="u-repeater u-repeater-1">
+
+                  <div class="u-container-style u-list-item u-repeater-item">
+                    <div class="u-container-layout u-similar-container u-container-layout-3">
+                      <h3 class="u-text u-text-default u-text-grey-15 u-text-3" data-animation-name="flipIn" data-animation-duration="2000" data-animation-delay="0" data-animation-direction="X">01</h3>
+                      <h5 class="u-text u-text-4"><strong>Descontos exclusivos</strong></h5>
+                      <p class="u-text u-text-5">
+                        Ao reservar com antecedência, você pode garantir até 35% de desconto em viagens, hospedagens, passeios e muito mais!
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="u-container-style u-list-item u-repeater-item">
+                    <div class="u-container-layout u-similar-container u-container-layout-4">
+                      <h3 class="u-text u-text-default u-text-grey-15 u-text-6" data-animation-name="flipIn" data-animation-duration="2000" data-animation-delay="0" data-animation-direction="X">02</h3>
+                      <h5 class="u-text u-text-7"><strong>Rede de parceiros</strong></h5>
+                      <p class="u-text u-text-8">
+                        Nossos parceiros incluem restaurantes, bares, hotéis, balneários e pontos turísticos em diversas regiões. Você economiza em tudo!
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="u-container-style u-list-item u-repeater-item">
+                    <div class="u-container-layout u-similar-container u-container-layout-5">
+                      <h3 class="u-text u-text-default u-text-grey-15 u-text-9" data-animation-name="flipIn" data-animation-duration="2000" data-animation-delay="0" data-animation-direction="X">03</h3>
+                      <h5 class="u-text u-text-10"><strong>Benefícios garantidos</strong></h5>
+                      <p class="u-text u-text-11">
+                        Viajar conosco é ter mais do que uma experiência turística — é viver com vantagens reais em todos os momentos da sua jornada.
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+              </div> <!-- fim lista -->
+            </div>
+          </div>
+
+        </div> <!-- fim row -->
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <section id="destinos" class="destinos-section">
+    <div class="container">
+      <h2 class="section-title"> Nossos Destinos</h2>
+      <p class="section-subtitle">Explore os melhores destinos do <STRong>Ceará</STRong> com pacotes incríveis!</p>
+      <div class="row g-4 justify-content-center">
+        <!-- Jericoacoara -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card destino-card h-100" data-destino="Jericoacoara" data-valor="250">
+            <div class="image-wrapper">
+              <img src="images-sun/jericoacoara-national-park-1024x682.webp" class="card-img-top" alt="Jericoacoara">
+              <div class="image-overlay">
+                <span class="overlay-icon">🌅</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Jericoacoara - CE</h5>
+              <p class="card-text">1 dia com hospedagem + Transfer 4x4<br><strong>R$ 250</strong></p>
+              <div class="destino-benefits">
+                <span class="benefit-item"><i class="benefit-icon">🏨</i> Hospedagem Inclusa</span>
+                <span class="benefit-item"><i class="benefit-icon">🚙</i> Transfer 4x4</span>
+              </div>
+              <span class="badge bg-success">Mais Procurado</span>
+              <a href="pacotes/Jericuacuara/jericuacuara.html" class="btn btn-primary btn-hover mt-3 card-link">Saiba Mais</a>
+            </div>
+          </div>
+        </div>
+        <!-- 3 Praias -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card destino-card h-100" data-destino="3 Praias em 1 Dia" data-valor="100">
+            <div class="image-wrapper">
+              <img src="images-sun/combo.png" class="card-img-top" alt="Morro Branco, Fontes e Canoa">
+              <div class="image-overlay">
+                <span class="overlay-icon">🏖️</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">3 Praias em 1 Dia</h5>
+              <p class="card-text">Morro Branco, Praia das Fontes e Canoa Quebrada<br><strong>R$ 100</strong></p>
+              <div class="destino-benefits">
+                <span class="benefit-item"><i class="benefit-icon">🌊</i> Três Praias</span>
+                <span class="benefit-item"><i class="benefit-icon">💸</i> Combo Econômico</span>
+              </div>
+              <span class="badge bg-warning text-dark">Combo Especial</span>
+              <a href="pacotes/Combo-3/Combo-3.html" class="btn btn-primary btn-hover mt-3 card-link">Saiba Mais</a>
+            </div>
+          </div>
+        </div>
+        <!-- Lagoinha -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card destino-card h-100" data-destino="Lagoinha" data-valor="90">
+            <div class="image-wrapper">
+              <img src="images-sun/lagoinha-ce-696x470.webp" class="card-img-top" alt="Lagoinha">
+              <div class="image-overlay">
+                <span class="overlay-icon">🌴</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Praia de Lagoinha</h5>
+              <p class="card-text">Pacotes exclusivos para famílias e grupos<br><strong>R$ 90</strong></p>
+              <div class="destino-benefits">
+                <span class="benefit-item"><i class="benefit-icon">👨‍👩‍👧‍👦</i> Ideal para Famílias</span>
+                <span class="benefit-item"><i class="benefit-icon">🎉</i> Grupos Bem-vindos</span>
+              </div>
+              <span class="badge bg-primary">Disponível</span>
+              <a href="pacotes/PraiaDeLagoinha/PraiaDeLagoinha.html" class="btn btn-primary btn-hover mt-3 card-link">Saiba Mais</a>
+            </div>
+          </div>
+        </div>
+        <!-- Cumbuco -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card destino-card h-100" data-destino="Cumbuco" data-valor="60">
+            <div class="image-wrapper">
+              <img src="images-sun/cumbuco.webp" class="card-img-top" alt="Cumbuco">
+              <div class="image-overlay">
+                <span class="overlay-icon">🏄</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Praia de Cumbuco</h5>
+              <p class="card-text">Ideal para kitesurf e passeios de buggy<br><strong>R$ 60</strong></p>
+              <div class="destino-benefits">
+                <span class="benefit-item"><i class="benefit-icon">🏄</i> Kitesurf</span>
+                <span class="benefit-item"><i class="benefit-icon">🐞</i> Passeio de Buggy</span>
+              </div>
+              <a href="pacotes/Cumbuco/Cumbuco.html" class="btn btn-primary btn-hover mt-3 card-link">Saiba Mais</a>
+            </div>
+          </div>
+        </div>
+        <!-- Paracuru -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card destino-card h-100" data-destino="Paracuru" data-valor="70">
+            <div class="image-wrapper">
+              <img src="images-sun/tour-praia-de-paracuru-passeio-de-buggy-aos-lencoes-paracuruenses-66971fb774832-large.webp" class="card-img-top" alt="Paracuru">
+              <div class="image-overlay">
+                <span class="overlay-icon">🌿</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Praia de Paracuru</h5>
+              <p class="card-text">Para quem busca tranquilidade e natureza<br><strong>R$ 70</strong></p>
+              <div class="destino-benefits">
+                <span class="benefit-item"><i class="benefit-icon">🧘</i> Tranquilidade</span>
+                <span class="benefit-item"><i class="benefit-icon">🌳</i> Natureza Preservada</span>
+              </div>
+              <a href="pacotes/PraiaDeParacuru/PraiaDeParacuru.html" class="btn btn-primary btn-hover mt-3 card-link">Saiba Mais</a>
+            </div>
+          </div>
+        </div>
+        <!-- Flecheiras -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card destino-card h-100" data-destino="Flecheiras" data-valor="100">
+            <div class="image-wrapper">
+              <img src="images-sun/flecheiras-ceara-barracas-1.webp" class="card-img-top" alt="Flecheiras">
+              <div class="image-overlay">
+                <span class="overlay-icon">🏝️</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Praia de Flecheiras</h5>
+              <p class="card-text">Pacote a partir de <strong>R$ 100/dia</strong></p>
+              <div class="destino-benefits">
+                <span class="benefit-item"><i class="benefit-icon">🏖️</i> Praias Paradisíacas</span>
+                <span class="benefit-item"><i class="benefit-icon">💰</i> Preço Acessível</span>
+              </div>
+              <span class="badge bg-warning text-dark">Promoção</span>
+              <a href="pacotes/Flecheiras/Flecheiras.html" class="btn btn-primary btn-hover mt-3 card-link">Saiba Mais</a>
+            </div>
+          </div>
+        </div>
+        <!-- Águas Belas -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card destino-card h-100" data-destino="Águas Belas" data-valor="80">
+            <div class="image-wrapper">
+              <img src="images-sun/tour-aguas-belas-6421eddf5dcc4-large.webp" class="card-img-top" alt="Águas Belas">
+              <div class="image-overlay">
+                <span class="overlay-icon">🌊</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Praia de Águas Belas</h5>
+              <p class="card-text">Beleza natural e encontro do rio com o mar<br><strong>R$ 80</strong></p>
+              <div class="destino-benefits">
+                <span class="benefit-item"><i class="benefit-icon">🏞️</i> Rio e Mar</span>
+                <span class="benefit-item"><i class="benefit-icon">📸</i> Paisagens Únicas</span>
+              </div>
+              <a href="pacotes/AguasBelas/AguasBelas.html" class="btn btn-primary btn-hover mt-3 card-link">Saiba Mais</a>
+            </div>
+          </div>
+        </div>
+        <!-- Beach Park -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card destino-card h-100" data-destino="Transfer Beach Park" data-valor="55">
+            <div class="image-wrapper">
+              <img src="images-sun/beach-park-fortaleza.webp" class="card-img-top" alt="Beach Park">
+              <div class="image-overlay">
+                <span class="overlay-icon">🎢</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Transfer Beach Park</h5>
+              <p class="card-text">Leve sua família para um dia incrível<br><strong>R$ 55</strong></p>
+              <div class="destino-benefits">
+                <span class="benefit-item"><i class="benefit-icon">🎠</i> Parque Aquático</span>
+                <span class="benefit-item"><i class="benefit-icon">👨‍👩‍👧‍👦</i> Diversão em Família</span>
+              </div>
+              <a href="#agendamento" class="btn btn-primary btn-hover mt-3 card-link">Saiba Mais</a>
+            </div>
+          </div>
+        </div>
+        <!-- Privativos -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card destino-card h-100" data-destino="Privativos e Receptivos" data-valor="200">
+            <div class="image-wrapper">
+              <img src="images-sun/beach-family.webp" class="card-img-top" alt="Privativos e Receptivos">
+              <div class="image-overlay">
+                <span class="overlay-icon">✨</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Serviços Privativos e Receptivos</h5>
+              <p class="card-text">Roteiros personalizados e atendimento VIP<br><strong>R$ 200</strong></p>
+              <div class="destino-benefits">
+                <span class="benefit-item"><i class="benefit-icon">🌟</i> Atendimento VIP</span>
+                <span class="benefit-item"><i class="benefit-icon">📅</i> Roteiro Personalizado</span>
+              </div>
+              <span class="badge bg-info text-dark">Exclusivo</span>
+              <a href="#agendamento" class="btn btn-primary btn-hover mt-3 card-link">Saiba Mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-light py-5" id="sec-desconto">
+    <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between gap-5">
+  
+      <!-- Imagem ilustrativa -->
+      <div class="flex-shrink-0 w-100 w-lg-50" style="max-width: 500px;">
+        <img src="images/LOGO.png" alt="Prato promocional" class="img-fluid rounded-4 shadow-sm">
+      </div>
+  
+      <!-- Conteúdo do texto -->
+      <div class="text-center text-lg-start w-100 w-lg-50" style="max-width: 540px;">
+        <h2 class="mb-3 fw-bold text-primary" style="font-size: 2.3rem;">
+          Agende com antecedência e aproveite benefícios exclusivos
+        </h2>
+  
+        <p class="mb-4 text-secondary" style="font-size: 1.1rem; line-height: 1.7;">
+          Reservas antecipadas garantem até <strong>35% de desconto</strong> em suas viagens. Planeje sua visita e viva uma experiência completa com sonhos e felicidade!.
+          <strong>Voce tambem deve conhecer nossos parceiros!</strong> viajando conosco voce nao recebe desconto so em viagens nao, mas ate mesmo em <strong>Restaurantes, Bares, Hoteis e muito mais!</strong>
+        </p>
+  
+        <ul class="list-unstyled text-secondary mb-4 fs-6">
+          <li class="mb-2">✔️ Viajar com Descontos</li>
+          <li class="mb-2">✔️ Parceiros em todo canto</li>
+        </ul>
+  
+        <a href="parceiros.html" class="btn btn-outline-primary btn-lg rounded-pill px-4 shadow-sm">
+          Consultar nossos <strong>Parceiros</strong>
+        </a>
+      </div>
+  
+    </div>
+  </section>
+  
+  
+  
+
+  <section id="pacotes" class="py-24">
+    <h2 class="text-center mb-8">Pacotes Turísticos</h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="pacote-card">
+            <div class="image-wrapper">
+              <img src="images/praia.jpg" alt="Jericoacoara">
+              <div class="image-overlay"></div>
+            </div>
+            <div class="card-body text-center">
+              <h5>JERICOACOARA</h5>
+              <p>Pacote com hospedagens / transfer 4x4.<br><strong>R$ 250</strong></p>
+              <a href="#agendamento" class="btn btn-primary btn-hover">Saiba Mais</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="pacote-card">
+            <div class="image-wrapper">
+              <img src="images/canoa quebrada" alt="Canoa Quebrada">
+              <div class="image-overlay"></div>
+            </div>
+            <div class="card-body text-center">
+              <h5>CANOA QUEBRADA</h5>
+              <p>03 praias em 01 dia: Morro Branco, Fontes e Canoa Quebrada.<br><strong>R$ 100</strong></p>
+              <a href="#agendamento" class="btn btn-primary btn-hover">Saiba Mais</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="pacote-card">
+            <div class="image-wrapper">
+              <img src="images/foto lagoinha ceara painel 2.jpg" alt="Lagoinha">
+              <div class="image-overlay"></div>
+            </div>
+            <div class="card-body text-center">
+              <h5>PRAIA DE LAGOINHA</h5>
+              <p>Uma ótima praia pra passar o verão.<br><strong>R$ 80</strong></p>
+              <a href="#agendamento" class="btn btn-primary btn-hover">Saiba Mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <section id="quem-somos" class="py-20 bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-center text-blue-900 mb-12">Quem Somos</h2>
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+        <div class="lg:w-1/2 fade-in">
+          <p class="text-lg text-gray-700 leading-relaxed mb-6">
+            A <strong>Conexão Club do Turismo</strong> é uma agência apaixonada por criar experiências de viagem únicas e memoráveis. Com anos de expertise, conectamos viajantes aos destinos mais incríveis do Brasil e do mundo, com foco em qualidade, conforto e personalização.
+          </p>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            Nossa equipe dedicada trabalha para transformar cada roteiro em uma jornada especial, oferecendo suporte completo e serviços de excelência. Seja explorando praias, montanhas ou cidades vibrantes, a Conexão Club do Turismo está aqui para tornar sua viagem inesquecível.
+          </p>
+        </div>
+        <div class="lg:w-1/2 fade-in">
+          <img src="images/LOGO.jpg" alt="Destino Turístico" class="rounded-xl shadow-2xl w-full object-cover">
+        </div>
+      </div>
+      <div class="text-center mt-16">
+        <a href="#contato" class="inline-block bg-blue-600 text-white font-semibold text-lg py-4 px-8 rounded-full btn-hover transition duration-300">Planeje Sua Viagem Conosco</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="mapa" class="py-24 bg-light">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-center mb-4">Onde Estamos</h2>
+      <p class="text-center lead mb-12">
+        Encontre a <strong>Conexão Club do Turismo</strong> na nossa sede em Fortaleza, CE. Visite-nos para planejar sua próxima viagem ou entre em contato para um atendimento personalizado!
+      </p>
+      <div class="map-container rounded-2xl shadow-xl overflow-hidden fade-in">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4971.558356108388!2d-38.5101106!3d-3.7239660999999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74843eae07ea1%3A0x17b3ef0f19599dd6!2sAv.%20Monsenhor%20Tabosa%2C%201039%20-%20Sala%2007%20-%20Centro%2C%20Fortaleza%20-%20CE%2C%2060165-065!5e1!3m2!1spt-BR!2sbr!4v1745206098708!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="text-center mt-12">
+        <a href="#contato" class="btn btn-primary">Fale Conosco</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="destaques-clima" class="py-24">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid-container">
+        <!-- Destaques -->
+        <div class="grid-item destaques-section fade-in">
+          <h2>Destaques</h2>
+          <div class="destaques-grid">
+            <div class="destaque-item">
+              <img src="images-sun/jericoacoara-national-park-1024x682.webp" alt="Transfer Jericoacoara">
+              <p>Transfer Jericoacoara</p>
+            </div>
+            <div class="destaque-item">
+              <img src="images-sun/beach-park-fortaleza.webp" alt="Transfer Beach Park">
+              <p>Transfer Beach Park</p>
+            </div>
+            <div class="destaque-item">
+              <img src="images-sun/combo.png" alt="3 Praias em 1 Dia">
+              <p>3 Praias em 1 Dia</p>
+            </div>
+            <div class="destaque-item">
+              <img src="images-sun/canoa-quebrada.webp" alt="Passeio Canoa Quebrada">
+              <p>Passeio Canoa Quebrada</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- De Olho no Sol -->
+        <div class="grid-item clima-section fade-in">
+          <h2>De Olho no Sol</h2>
+          <div class="clima-container">
+            <!-- Widget do Tempo.com para Fortaleza -->
+            <a class="weatherwidget-io" href="https://forecast7.com/en/n3d73n38d53/fortaleza/" data-label_1="FORTALEZA" data-label_2="WEATHER" data-theme="original" data-basecolor="#ffffff" data-textcolor="#000101" >FORTALEZA WEATHER</a>
+    
+            <script>
+              !function(d,s,id){
+                var js,fjs=d.getElementsByTagName(s)[0];
+                if(!d.getElementById(id)){
+                  js=d.createElement(s);js.id=id;
+                  js.src='https://weatherwidget.io/js/widget.min.js';
+                  fjs.parentNode.insertBefore(js,fjs);
+                }
+              }(document,'script','weatherwidget-io-js');
+            </script>
+          </div>
+        </div>
+        
+        <!-- Praia ao Vivo -->
+        <div class="grid-item praia-vivo fade-in">
+          <h2>Praia ao Vivo</h2>
+          <div class="live-container">
+            <!-- Link adicionando em volta da imagem e texto -->
+            <a href="https://g3.ipcamlive.com/player/player.php?alias=62b5b82b359b2" target="_blank">
+              <img src="images-sun/beach-park-fortaleza.webp" alt="Praia do Beach Park">
+              <div class="live-badge">LIVE</div>
+              <p>Acompanhe em tempo real como está o clima diretamente da praia do Beach Park em Aquiraz, Porto das Dunas.</p>
+            </a>
+          </div>
+        </div>
+        
+  
+        <!-- Mural -->
+        <div class="grid-item mural-section fade-in">
+          <h2>Mural</h2>
+          <p>Entre em contato com nossa equipe de reservas via e-mail. Caso queira tirar alguma duvida, ou reclamacão :D.</p>
+          <form id="mural-form">
+            <div class="form-group">
+              <input type="text" id="mural-nome" placeholder="Nome" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" id="mural-telefone" placeholder="Telefone" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="mural-email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+              <textarea id="mural-mensagem" placeholder="Mensagem" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-hover">Enviar Agora</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="contato" class="bg-light">
+    <div class="container">
+      <h2 class="text-center">Fale Conosco</h2>
+      <div class="text-center">
+        <p>WhatsApp: <a href="https://wa.me/558599561584">(85) 9 956-1584</a></p>
+        <p>Email: mairtong25@gmail.com</p>
+        <p>Instagram: <a href="https://instagram.com/conexaoclubdevantagens" target="_blank">@conexaoclubdevantagens</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center py-4 bg-dark text-light">
+    <div class="container">
+      <p class="mb-0">© 2025 Conexão Tur CE. Todos os direitos reservados.</p>
+      <small>Criado por Isaac Santos</small>
+      <div class="mt-3">
+        <p class="mb-1">Formas de pagamento:</p>
+        <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap">
+          <img src="images/logo-pix-1024.webp" alt="Pix" width="40" height="40">
+          <img src="images/logo-visa-4096.webp" alt="Visa" width="40" height="40">
+          <img src="images/mastercard-icon-1024x793-xinze39n.webp" alt="MasterCard" width="40" height="40">
+          <img src="images/boleto-logo-1.webp" alt="Boleto" width="40" height="40">
+          <img src="images/elo-servicos-s-a-logo-png_seeklogo-272639.webp" alt="Elo" width="40" height="40">
+        </div>
+      </div>
+    </div>
+    <div class="mt-3">
+      <p class="mb-1">Empresa registrada no Cadastur</p>
+      <img src="images/cadastur-logo-8040CE11B1-seeklogo.com.webp" alt="Selo Cadastur" width="120">
+      <p class="mt-2">CNPJ: 39.669.275/0001-58</p>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top" title="Voltar ao topo">↑</a>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="QuemSomos.js"></script>
+  <script src="mapa-script.js"></script>
+  <script>
+
+    // Botão de voltar ao topo
+    const backToTopButton = document.querySelector(".back-to-top");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 400) {
+        backToTopButton?.classList.add("show");
+      } else {
+        backToTopButton?.classList.remove("show");
+      }
+    });
+
+    backToTopButton?.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+
+  </script>
+</body>
+</html>

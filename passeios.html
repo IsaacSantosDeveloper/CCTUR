@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pacote Jericoacoara</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/passeios.css" />
+    <script src="js/main.js" defer></script>
+    <script src="js/slider.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="top-bar">
+          <div class="sides">
+            <a href="index.html" class="logo">CCTUR</a>
+          </div>
+        
+          <nav class="nav-links">
+            <a href="#">Início</a>
+            <a href="#">Passeios</a>
+            <a href="#">Parceiros</a>
+            <a href="#">Opções</a>
+            <a href="#">Sobre</a>
+          </nav>
+
+          <!-- Movi o menu para dentro da top-bar -->
+          <div class="sides">
+            <a href="#" class="menu" id="openMenu"></a>
+          </div>
+        </div>
+
+        <div class="info"></div>
+        <dialog id="mobile-menu">
+          <a href="#">Inicio</a>
+          <a href="#">Passeios</a>
+          <a href="#">Promoções</a>
+          <a href="#">Parceiros</a>
+          <a href="#">Contato</a>
+          <a href="#">Reclame Aqui</a>
+        </dialog>
+      </header>
+
+      <section id="destinos" class="destinos-section">
+        <div class="container">
+          <h2 class="section-title">Nossos Destinos</h2>
+          <p class="section-subtitle">Explore os melhores destinos do Ceará com pacotes incríveis!</p>
+          <div class="row">
+            <!-- Jericoacoara -->
+            <div class="destino-card h-100" data-destino="Jericoacoara" data-valor="250">
+              <div class="image-wrapper">
+                <img src="images-sun/jericoacoara-national-park-1024x682.webp" class="card-img-top" alt="Jericoacoara">
+                <div class="image-overlay">
+                  <span class="overlay-icon">🌅</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Jericoacoara - CE</h5>
+                <p class="card-text">1 dia com hospedagem + Transfer 4x4<br><strong>R$ 250</strong></p>
+                <div class="destino-benefits">
+                  <span class="benefit-item"><i class="benefit-icon">🏨</i> Hospedagem Inclusa</span>
+                  <span class="benefit-item"><i class="benefit-icon">🚙</i> Transfer 4x4</span>
+                </div>
+                <span class="badge bg-success">Mais Procurado</span>
+                <a href="pacotes/Jericuacuara/jericuacuara.html" class="btn btn-primary btn-hover mt-3 card-link">Saiba Mais</a>
+              </div>
+            </div>
+            <!-- 3 Praias -->
+            <div class="destino-card h-100" data-destino="3 Praias em 1 Dia" data-valor="100">
+              <div class="image-wrapper">
+                <img src="images-sun/combo.png" class="card-img-top" alt="Morro Branco, Fontes e Canoa">
+                <div class="image-overlay">
+                  <span class="overlay-icon">🏖️</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">3 Praias em 1 Dia</h5>
+                <p class="card-text">Morro Branco, Praia das Fontes e Canoa Quebrada<br><strong>R$ 100</strong></p>
+                <div class="destino-benefits">
+                  <span class="benefit-item"><i class="benefit-icon">🌊</i> Três Praias</span>
+                  <span class="benefit-item"><i class="benefit-icon">💸</i> Combo Econômico</span>
+                </div>
+                <span class="badge bg-warning text-dark">Combo Especial</span>
+                <a href="pacotes/Combo-3/Combo-3.html" class="btn btn-primary btn-hover mt-3 card-link">Saiba Mais</a>
+              </div>
+            </div>
+            <!-- Lagoinha -->
+            <div class="destino-card h-100" data-destino="Lagoinha" data-valor="90">
+              <div class="image-wrapper">
+                <img src="images-sun/lagoinha-ce-696x470.webp" class="card-img-top" alt="Lagoinha">
+                <div class="image-overlay">
+                  <span class="overlay-icon">🌴</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Praia de Lagoinha</h5>
+                <p class="card-text">Pacotes exclusivos para famílias e grupos<br><strong>R$ 90</strong></p>
+                <div class="destino-benefits">
+                  <span class="benefit-item"><i class="benefit-icon">👨‍👩‍👧‍👦</i> Ideal para Famílias</span>
+                  <span class="benefit-item"><i class="benefit-icon">🎉</i> Grupos Bem-vindos</span>
+                </div>
+                <span class="badge bg-primary">Disponível</span>
+                <a href="pacotes/PraiaDeLagoinha/PraiaDeLagoinha.html" class="btn btn-primary btn-hover mt-3 card-link">Saiba Mais</a>
+              </div>
+            </div>
+            <!-- Cumbuco -->
+            <div class="destino-card h-100" data-destino="Cumbuco" data-valor="60">
+              <div class="image-wrapper">
+                <img src="images-sun/cumbuco.webp" class="card-img-top" alt="Cumbuco">
+                <div class="image-overlay">
+                  <span class="overlay-icon">🏄</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Praia de Cumbuco</h5>
+                <p class="card-text">Ideal para kitesurf e passeios de buggy<br><strong>R$ 60</strong></p>
+                <div class="destino-benefits">
+                  <span class="benefit-item"><i class="benefit-icon">🏄</i> Kitesurf</span>
+                  <span class="benefit-item"><i class="benefit-icon">🐞</i> Passeio de Buggy</span>
+                </div>
+                <a href="pacotes/Cumbuco/Cumbuco.html" class="btn btn-primary btn-hover mt-3 card-link">Saiba Mais</a>
+              </div>
+            </div>
+            <!-- Paracuru -->
+            <div class="destino-card h-100" data-destino="Paracuru" data-valor="70">
+              <div class="image-wrapper">
+                <img src="images-sun/tour-praia-de-paracuru-passeio-de-buggy-aos-lencoes-paracuruenses-66971fb774832-large.webp" class="card-img-top" alt="Paracuru">
+                <div class="image-overlay">
+                  <span class="overlay-icon">🌿</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Praia de Paracuru</h5>
+                <p class="card-text">Para quem busca tranquilidade e natureza<br><strong>R$ 70</strong></p>
+                <div class="destino-benefits">
+                  <span class="benefit-item"><i class="benefit-icon">🧘</i> Tranquilidade</span>
+                  <span class="benefit-item"><i class="benefit-icon">🌳</i> Natureza Preservada</span>
+                </div>
+                <a href="pacotes/PraiaDeParacuru/PraiaDeParacuru.html" class="btn btn-primary btn-hover mt-3 card-link">Saiba Mais</a>
+              </div>
+            </div>
+            <!-- Flecheiras -->
+            <div class="destino-card h-100" data-destino="Flecheiras" data-valor="100">
+              <div class="image-wrapper">
+                <img src="images-sun/flecheiras-ceara-barracas-1.webp" class="card-img-top" alt="Flecheiras">
+                <div class="image-overlay">
+                  <span class="overlay-icon">🏝️</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Praia de Flecheiras</h5>
+                <p class="card-text">Pacote a partir de <strong>R$ 100/dia</strong></p>
+                <div class="destino-benefits">
+                  <span class="benefit-item"><i class="benefit-icon">🏖️</i> Praias Paradisíacas</span>
+                  <span class="benefit-item"><i class="benefit-icon">💰</i> Preço Acessível</span>
+                </div>
+                <span class="badge bg-warning text-dark">Promoção</span>
+                <a href="pacotes/Flecheiras/Flecheiras.html" class="btn btn-primary btn-hover mt-3 card-link">Saiba Mais</a>
+              </div>
+            </div>
+            <!-- Águas Belas -->
+            <div class="destino-card h-100" data-destino="Águas Belas" data-valor="80">
+              <div class="image-wrapper">
+                <img src="images-sun/tour-aguas-belas-6421eddf5dcc4-large.webp" class="card-img-top" alt="Águas Belas">
+                <div class="image-overlay">
+                  <span class="overlay-icon">🌊</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Praia de Águas Belas</h5>
+                <p class="card-text">Beleza natural e encontro do rio com o mar<br><strong>R$ 80</strong></p>
+                <div class="destino-benefits">
+                  <span class="benefit-item"><i class="benefit-icon">🏞️</i> Rio e Mar</span>
+                  <span class="benefit-item"><i class="benefit-icon">📸</i> Paisagens Únicas</span>
+                </div>
+                <a href="pacotes/AguasBelas/AguasBelas.html" class="btn btn-primary btn-hover mt-3 card-link">Saiba Mais</a>
+              </div>
+            </div>
+            <!-- Beach Park -->
+            <div class="destino-card h-100" data-destino="Transfer Beach Park" data-valor="55">
+              <div class="image-wrapper">
+                <img src="images-sun/beach-park-fortaleza.webp" class="card-img-top" alt="Beach Park">
+                <div class="image-overlay">
+                  <span class="overlay-icon">🎢</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Transfer Beach Park</h5>
+                <p class="card-text">Leve sua família para um dia incrível<br><strong>R$ 55</strong></p>
+                <div class="destino-benefits">
+                  <span class="benefit-item"><i class="benefit-icon">🎠</i> Parque Aquático</span>
+                  <span class="benefit-item"><i class="benefit-icon">👨‍👩‍👧‍👦</i> Diversão em Família</span>
+                </div>
+                <a href="#agendamento" class="btn btn-primary btn-hover mt-3 card-link">Saiba Mais</a>
+              </div>
+            </div>
+            <!-- Privativos -->
+            <div class="destino-card h-100" data-destino="Privativos e Receptivos" data-valor="200">
+              <div class="image-wrapper">
+                <img src="images-sun/beach-family.webp" class="card-img-top" alt="Privativos e Receptivos">
+                <div class="image-overlay">
+                  <span class="overlay-icon">✨</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Serviços Privativos e Receptivos</h5>
+                <p class="card-text">Roteiros personalizados e atendimento VIP<br><strong>R$ 200</strong></p>
+                <div class="destino-benefits">
+                  <span class="benefit-item"><i class="benefit-icon">🌟</i> Atendimento VIP</span>
+                  <span class="benefit-item"><i class="benefit-icon">📅</i> Roteiro Personalizado</span>
+                </div>
+                <span class="badge bg-info text-dark">Exclusivo</span>
+                <a href="#agendamento" class="btn btn-primary btn-hover mt-3 card-link">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
