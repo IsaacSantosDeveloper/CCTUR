@@ -1,39 +1,37 @@
 /* ==========================================================================
    Estilos Gerais
    ========================================================================== */
-   * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: "Montserrat", sans-serif;
-    line-height: 1.6;
-  }
-  
- /* ==========================================================================
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
    Header (Design Profissional e Clean)
    ========================================================================== */
+.u-header {
+  transition: all 0.3s ease;
+}
 
-   .u-header {
-    transition: all 0.3s ease;
-  }
-  
-  .u-header.scrolled {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 0.5rem 2%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .u-header.scrolled .u-logo-image {
-    max-height: 60px;
-  }
-  
-  .u-header.scrolled .u-nav-link {
-    font-size: 0.9rem;
-  }
+.u-header.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.5rem 2%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
+.u-header.scrolled .u-logo-image {
+  max-height: 60px;
+}
+
+.u-header.scrolled .u-nav-link {
+  font-size: 0.9rem;
+}
 
 :root {
   --primary-color: #000000;
@@ -328,1406 +326,1413 @@
     height: 2px;
   }
 }
-  
-  /* ==========================================================================
-     Seção 1: Conexão Club do Turista
-     ========================================================================== */
-  .u-section-1 {
-    background-image: url("../images/Design sem nome.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #000;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 80px; /* Ajuste para o header fixo */
-  }
-  
-  .u-section-1 .u-sheet-1 {
-    min-height: 600px;
-    padding: 2rem 2%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .u-section-1 .u-layout-wrap-1 {
-    margin-top: 10vh;
-    margin-bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .u-section-1 .u-layout-cell-1 {
-    min-height: 50px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .u-section-1 .u-container-layout-1 {
-    padding: 0 1rem 1.5rem;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .u-section-1 .u-text-3 {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-size: clamp(4rem, 14vw, 9rem);
-    color: #ffd67d;
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
-    margin: 0 auto;
-    text-align: center;
-    position: relative;
-    top: 0;
-    line-height: 1.1;
-    letter-spacing: 0.02em;
-  }
-  
-  /* ==========================================================================
-     Seção 2: 31 Temporada
-     ========================================================================== */
-  .u-section-2 .u-sheet-1 {
-    min-height: 661px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 50px 5%;
-  }
-  
-  .u-section-2 .u-layout-wrap-1 {
-    margin-top: 60px;
-    margin-bottom: 0;
-  }
-  
-  .u-section-2 .u-layout-cell-1 {
-    min-height: 601px;
-  }
-  
-  .u-section-2 .u-container-layout-1 {
-    padding: 12px 28px 0;
-  }
-  
-  .u-section-2 .u-text-1 {
-    font-size: 6rem;
-    margin: 17px 2px 0;
-  }
-  
-  .u-section-2 .u-text-2 {
-    margin: 22px 151px 0 1px;
-  }
-  
-  .u-section-2 .u-btn-1 {
-    margin: 24px auto 0 2px;
-    padding: 13px 40px 15px 39px;
-  }
-  
-  .u-section-2 .u-image-1 {
-    height: 352px;
-    width: 425px;
-    object-position: 50% 2.9%;
-    margin: -40px 0 0 auto;
-  }
-  
-  .u-section-2 .u-layout-cell-2 {
-    min-height: 601px;
-  }
-  
-  .u-section-2 .u-container-layout-2 {
-    padding: 0;
-  }
-  
-  .u-section-2 .u-list-1 {
-    width: 540px;
-    margin: 0 0 0 auto;
-  }
-  
-  .u-section-2 .u-repeater-1 {
-    grid-auto-columns: 100%;
-    grid-template-columns: repeat(1, 100%);
-    min-height: 570px;
-    grid-gap: 10px;
-  }
-  
-  .u-section-2 .u-container-layout-3,
-  .u-section-2 .u-container-layout-4,
-  .u-section-2 .u-container-layout-5 {
-    padding: 10px;
-  }
-  
-  .u-section-2 .u-text-3,
-  .u-section-2 .u-text-6,
-  .u-section-2 .u-text-9 {
-    font-size: 3.75rem;
-    margin: 0 auto 0 0;
-  }
-  
-  .u-section-2 .u-text-4,
-  .u-section-2 .u-text-7,
-  .u-section-2 .u-text-10 {
-    font-size: 1.25rem;
-    margin: -48px auto 0 91px;
-  }
-  
-  .u-section-2 .u-text-5,
-  .u-section-2 .u-text-8,
-  .u-section-2 .u-text-11 {
-    margin: 24px 0 0;
-  }
-  
-  /* ==========================================================================
-     Seção: Nossos Destinos
-     ========================================================================== */
-  .destinos-section {
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-    padding: 80px 20px;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .destinos-section .container {
-    max-width: 1400px;
-  }
-  
-  .destinos-section .section-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #1403ff;
-    margin-bottom: 1rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .destinos-section .section-subtitle {
-    font-size: 1.2rem;
-    color: #555;
-    text-align: center;
-    margin-bottom: 3rem;
-    line-height: 1.6;
-  }
-  
-  .destino-card {
-    border: none;
-    border-radius: 1rem;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    background: #fff;
-    overflow: hidden;
-    animation: fadeInCard 0.8s ease-out forwards;
-    opacity: 0;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  @keyframes fadeInCard {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-  
-  .destino-card:nth-child(1) { animation-delay: 0.1s; }
-  .destino-card:nth-child(2) { animation-delay: 0.2s; }
-  .destino-card:nth-child(3) { animation-delay: 0.3s; }
-  .destino-card:nth-child(4) { animation-delay: 0.4s; }
-  .destino-card:nth-child(5) { animation-delay: 0.5s; }
-  .destino-card:nth-child(6) { animation-delay: 0.6s; }
-  .destino-card:nth-child(7) { animation-delay: 0.7s; }
-  .destino-card:nth-child(8) { animation-delay: 0.8s; }
-  .destino-card:nth-child(9) { animation-delay: 0.9s; }
-  
-  .destino-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-  }
-  
-  .image-wrapper {
-    position: relative;
-    transition: all 0.3s ease;
-  }
-  
-  .card-img-top {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 3px solid #ffaf03;
-    transition: border-color 0.3s ease;
-  }
-  
-  .destino-card:hover .card-img-top {
-    border-color: #1403ff;
-  }
-  
-  .image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    pointer-events: none;
-  }
-  
-  .destino-card:hover .image-overlay {
-    opacity: 1;
-  }
-  
-  .overlay-icon {
-    font-size: 2.5rem;
-    color: #fff;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  }
-  
-  .card-body {
-    padding: 1.5rem;
-    text-align: center;
-  }
-  
-  .card-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #000000;
-    margin-bottom: 0.75rem;
-  }
 
-  .card-title {
-    color: #000000 !important;
-  }
-  
-  
-  .card-text {
-    font-size: 0.9rem;
-    color: #333;
-    margin-bottom: 1rem;
-    line-height: 1.5;
-  }
-  
-  .destino-benefits {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .benefit-item {
-    display: flex;
-    align-items: center;
-    background: #f8f9fa;
-    padding: 0.3rem 0.8rem;
-    border-radius: 1rem;
-    font-size: 0.85rem;
-    color: #555;
-  }
-  
-  .benefit-icon {
-    margin-right: 0.3rem;
-  }
-  
-  .badge {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 0.5rem 1rem;
-    font-size: 0.85rem;
-    font-weight: 600;
-    border-radius: 1rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .badge.bg-success { background: linear-gradient(45deg, #28a745, #34c759); color: white; }
-  .badge.bg-warning { background: linear-gradient(45deg, #ffaf03, #ffca28); color: #333; }
-  .badge.bg-primary { background: linear-gradient(45deg, #1403ff, #4169e1); color: white; }
-  .badge.bg-info { background: linear-gradient(45deg, #17a2b8, #48c6d9); color: white; }
-  
-  .destino-card:hover .badge {
-    transform: scale(1.05);
-  }
-  
-  .card-body .btn-primary {
-    background: linear-gradient(90deg, #ffaf03, #ffca28);
-    border: none;
-    padding: 0.5rem 1.5rem;
-    font-size: 0.9rem;
-    font-weight: 600;
-    border-radius: 0.75rem;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-    display: inline-block;
-  }
-  
-  .card-body .btn-primary:hover {
-    background: linear-gradient(90deg, #e69b00, #ffaf03);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* ==========================================================================
-     Seção: Desconto
-     ========================================================================== */
-  #sec-desconto {
-    padding: 80px 20px;
-    background: #f8f9fa;
-  }
-  
-  #sec-desconto .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
-  
-  #sec-desconto img {
-    max-width: 500px;
-    width: 100%;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  #sec-desconto h2 {
-    font-size: 2.3rem;
-    font-weight: 700;
-    color: #1403ff;
-    margin-bottom: 1rem;
-  }
-  
-  #sec-desconto p {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.7;
-  }
-  
-  #sec-desconto .btn-outline-primary {
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 2rem;
-  }
+/* ==========================================================================
+   Slogan
+   ========================================================================== */
+.hero-banner {
+  height: 100vh;
+  width: 100%;
+  background-image: url('../images/praia-dos-tres-irmaos.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  /* ==========================================================================
-     Seção: Pacotes Turísticos
-     ========================================================================== */
-  #pacotes {
-    padding: 100px 20px;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  #pacotes h2 {
-    font-size: 3rem;
-    font-weight: 800;
-    color: #1403ff;
-    margin-bottom: 3rem;
-    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-    text-align: center;
-  }
-  
-  .mySwiper {
-    max-width: 1700px;
-    margin: 0 auto;
-    padding: 0 30px;
-  }
-  
-  .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .pacote-card {
-    background: #fff;
-    border-radius: 1.25rem;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-    overflow: hidden;
-    border: 2px solid #ffaf03;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-  }
-  
-  .pacote-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-  }
-  
-  .pacote-card img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    display: block;
-  }
-  
-  .pacote-card:hover .image-overlay {
-    opacity: 1;
-  }
-  
-  .card-body h5 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #1403ff;
-    margin-bottom: 1rem;
-  }
-  
-  .card-body p {
-    font-size: 1rem;
-    color: #333;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-  }
-  
-  .swiper-button-next,
-  .swiper-button-prev {
-    color: #fff;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    transition: background 0.3s ease, transform 0.3s ease;
-  }
-  
-  .swiper-button-next:hover,
-  .swiper-button-prev:hover {
-    transform: scale(1.1);
-  }
-  
-  .swiper-button-next::after,
-  .swiper-button-prev::after {
-    font-size: 1.2rem;
-  }
-  
-  .swiper-pagination {
-    bottom: 15px !important;
-  }
-  
-  .swiper-pagination-bullet {
-    background: #ffaf03;
-    opacity: 0.6;
-    width: 12px;
-    height: 12px;
-  }
-  
-  .swiper-pagination-bullet-active {
-    background: #1403ff;
-    opacity: 1;
-  }
-  
-  /* ==========================================================================
-     Seção: Quem Somos
-     ========================================================================== */
-  #quem-somos {
-    padding: 80px 20px;
-    background: #fff;
-  }
-  
-  #quem-somos h2 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: #1403ff;
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-  
-  #quem-somos p {
-    font-size: 1.125rem;
-    color: #333;
-    line-height: 1.8;
-  }
-  
-  #quem-somos img {
-    border-radius: 0.75rem;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* ==========================================================================
-     Seção: Mapa
-     ========================================================================== */
-  #mapa {
-    background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
-    padding: 80px 20px;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  #mapa .container {
-    position: relative;
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  text-align: center;
+  color: #fff;
+  border-radius: 12px;
+}
+
+.empresa-nome {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.slogan {
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================================================================
+   Seção 1: Conexão Club do Turista
+   ========================================================================== */
+.u-section-1 {
+  background-image: url("../images/Design sem nome.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #000;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+}
+
+.u-section-1 .u-sheet-1 {
+  min-height: 600px;
+  padding: 2rem 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.u-section-1 .u-layout-wrap-1 {
+  margin-top: 10vh;
+  margin-bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.u-section-1 .u-layout-cell-1 {
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.u-section-1 .u-container-layout-1 {
+  padding: 0 1rem 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.u-section-1 .u-text-3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: clamp(4rem, 14vw, 9rem);
+  color: #ffd67d;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  top: 0;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}
+
+/* ==========================================================================
+   Seção 2: 31 Temporada (Nossos Parceiros)
+   ========================================================================== */
+.u-section-2 .u-sheet-1 {
+    min-height: 400px; /* Reduzido de 661px */
     max-width: 1200px;
-  }
-  
-  #mapa h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #1403ff;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-  
-  #mapa p.lead {
-    font-size: 1.25rem;
-    color: #333;
-    line-height: 1.8;
-    max-width: 800px;
-    margin: 0 auto 2.5rem;
-    text-align: center;
-  }
-  
-  .map-container {
-    border: 5px solid #ffaf03;
-    border-radius: 1.25rem;
-    background: #ffffff;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .map-container:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
-  }
-  
-  .map-container iframe {
-    display: block;
-    width: 100%;
-    height: 450px;
-    border: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  #mapa .btn-primary {
-    background: linear-gradient(90deg, #ffaf03, #ffca28);
-    border: none;
-    padding: 1rem 2.5rem;
-    font-size: 1.125rem;
-    font-weight: 600;
-    border-radius: 2rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-  }
-  
-  #mapa .btn-primary:hover {
-    background: linear-gradient(90deg, #e69b00, #ffaf03);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-  }
-  
-  #mapa .container::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 120px;
-    height: 4px;
-    background: linear-gradient(90deg, #1403ff, #ffaf03);
-    border-radius: 2px;
-  }
-  
-  /* ==========================================================================
-     Seção: Destaques e Clima
-     ========================================================================== */
-  #destaques-clima {
-    background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
-    padding: 80px 20px;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  #destaques-clima .container {
-    position: relative;
-    z-index: 1;
-  }
-  
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-  }
-  
-  .grid-item {
-    background: #fff;
-    padding: 20px;
-    border-radius: 1rem;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease;
-  }
-  
-  .grid-item:hover {
-    transform: translateY(-5px);
-  }
-  
-  .grid-item h2 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #1403ff;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-  
-  .destaques-section {
-    border: 3px solid #ffaf03;
-  }
-  
-  .destaques-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-  }
-  
-  .destaque-item {
-    text-align: center;
-  }
-  
-  .destaque-item img {
-    width: 100%;
-    height: 130px;
-    object-fit: cover;
-    border-radius: 0.5rem;
-    margin-bottom: 0.5rem;
-    border: 1px solid #eee;
-    transition: border-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .destaque-item:hover img {
-    border-color: #ffaf03;
-    transform: scale(1.03);
-  }
-  
-  .destaque-item p {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: #333;
-  }
-  
-  .clima-section {
-    border: 3px solid #ff4444;
-  }
-  
-  .clima-container {
-    text-align: center;
-  }
-  
-  .praia-vivo {
-    border: 3px solid #28a745;
-  }
-  
-  .live-container {
-    position: relative;
-    text-align: center;
-  }
-  
-  .live-container img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 0.5rem;
-    margin-bottom: 0.5rem;
-    transition: transform 0.3s ease;
-  }
-  
-  .live-badge {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: linear-gradient(45deg, #ff4444, #ff6666);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 1rem;
-    font-size: 0.9rem;
-    font-weight: 600;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .praia-vivo p {
-    font-size: 0.9rem;
-    color: #333;
-  }
-  
-  .mural-section {
-    border: 3px solid #17a2b8;
-  }
-  
-  .mural-section p {
-    font-size: 0.9rem;
-    color: #333;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-  
-  .mural-section .form-group {
-    margin-bottom: 1rem;
-  }
-  
-  .mural-section .form-group input,
-  .mural-section .form-group textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 0.5rem;
-    font-size: 0.9rem;
-    background: #fff;
-    transition: border-color 0.3s ease;
-  }
-  
-  .mural-section .form-group input:focus,
-  .mural-section .form-group textarea:focus {
-    border-color: #ffaf03;
-    outline: none;
-  }
-  
-  .mural-section .form-group textarea {
-    resize: none;
-  }
-  
-  .mural-section .btn-primary {
-    background: linear-gradient(90deg, #ffaf03, #ffca28);
-    border: none;
-    padding: 0.75rem 1.5rem;
-    font-size: 0.9rem;
-    font-weight: 600;
-    border-radius: 0.75rem;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-    display: block;
     margin: 0 auto;
-  }
-  
-  .mural-section .btn-primary:hover {
-    background: linear-gradient(90deg, #e69b00, #ffaf03);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* ==========================================================================
-     Seção: Parceiros
-     ========================================================================== */
-  .parceiros-section {
-    background-color: #f1f1f1;
-    padding: 60px 20px;
-  }
-  
-  .titulo-parceiros {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #1403ff;
-    text-align: center;
-  }
-  
-  .subtitulo-parceiros {
-    font-size: 1.1rem;
-    margin-bottom: 40px;
-    color: #555;
-    text-align: center;
-  }
-  
-  .parceiros-logos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-  }
-  
-  .parceiro-item {
-    width: 150px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    padding: 10px;
-    transition: transform 0.3s ease;
-  }
-  
-  .parceiro-item img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    filter: grayscale(100%);
-    transition: 0.3s ease;
-  }
-  
-  .parceiro-item img:hover {
-    filter: grayscale(0%);
-    transform: scale(1.05);
-  }
-  
-  /* ==========================================================================
-     Seção: Contato
-     ========================================================================== */
-  #contato {
-    padding: 80px 20px;
-    background: #f8f9fa;
-  }
-  
-  #contato h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #1403ff;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  #contato p {
-    font-size: 1.125rem;
-    color: #333;
-    text-align: center;
-  }
-  
-  /* ==========================================================================
-     Footer
-     ========================================================================== */
-  footer {
-    background: #111;
-    color: #ccc;
-    font-size: 0.9rem;
-    padding: 20px 0;
-    text-align: center;
-  }
-  
-  footer small {
-    display: block;
-    margin-top: 5px;
-    color: #666;
-  }
-  
-  footer img {
-    border-radius: 5px;
-    background-color: white;
-    padding: 4px;
-  }
-  
-  /* ==========================================================================
-     Botão Voltar ao Topo
-     ========================================================================== */
-  .back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #ffaf03;
-    color: #000;
-    font-size: 1.5rem;
-    padding: 0.5rem 0.8rem;
-    border-radius: 50%;
-    border: 2px solid #05060f;
-    box-shadow: 3px 3px #05060f;
-    text-decoration: none;
+    padding: 20px 5%;
+    margin-bottom: -20px; /* Adicionado para puxar a próxima seção para cima */
+}
+
+.u-section-2 .u-layout-wrap-1 {
+    margin-top: 30px;
+    margin-bottom: 0 !important; /* Garante que não haja margem inferior */
+}
+
+.u-section-2 .u-layout-cell-1 {
+  min-height: 601px;
+}
+
+.u-section-2 .u-container-layout-1 {
+  padding: 12px 28px 0;
+}
+
+.u-section-2 .u-text-1 {
+  font-size: 6rem;
+  margin: 17px 2px 0;
+}
+
+.u-section-2 .u-text-2 {
+  margin: 22px 151px 0 1px;
+}
+
+.u-section-2 .u-btn-1 {
+  margin: 24px auto 0 2px;
+  padding: 13px 40px 15px 39px;
+}
+
+.u-section-2 .u-image-1 {
+  height: 352px;
+  width: 425px;
+  object-position: 50% 2.9%;
+  margin: -40px 0 0 auto;
+}
+
+.u-section-2 .u-layout-cell-2 {
+  min-height: 601px;
+}
+
+.u-section-2 .u-container-layout-2 {
+  padding: 0;
+}
+
+.u-section-2 .u-list-1 {
+  width: 540px;
+  margin: 0 0 0 auto;
+}
+
+.u-section-2 .u-repeater-1 {
+  grid-auto-columns: 100%;
+  grid-template-columns: repeat(1, 100%);
+  min-height: 570px;
+  grid-gap: 10px;
+}
+
+.u-section-2 .u-container-layout-3,
+.u-section-2 .u-container-layout-4,
+.u-section-2 .u-container-layout-5 {
+  padding: 10px;
+}
+
+.u-section-2 .u-text-3,
+.u-section-2 .u-text-6,
+.u-section-2 .u-text-9 {
+  font-size: 3.75rem;
+  margin: 0 auto 0 0;
+}
+
+.u-section-2 .u-text-4,
+.u-section-2 .u-text-7,
+.u-section-2 .u-text-10 {
+  font-size: 1.25rem;
+  margin: -48px auto 0 91px;
+}
+
+.u-section-2 .u-text-5,
+.u-section-2 .u-text-8,
+.u-section-2 .u-text-11 {
+  margin: 24px 0 0;
+}
+
+/* ==========================================================================
+   Seção: Nossos Destinos
+   ========================================================================== */
+.destinos-section {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.destinos-section .container {
+  max-width: 1400px;
+}
+
+.destinos-section .section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1403ff;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.destinos-section .section-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  text-align: center;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.destino-card {
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  overflow: hidden;
+  animation: fadeInCard 0.8s ease-out forwards;
+  opacity: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@keyframes fadeInCard {
+  0% {
     opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease-in-out;
-    z-index: 999;
+    transform: translateY(20px);
   }
-  
-  .back-to-top:hover {
-    background: #0d6efd;
-  }
-  
-  .back-to-top.show {
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  /* ==========================================================================
-     Animações
-     ========================================================================== */
-  @keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(30px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-  
-  .fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  }
-  
-  .fade-in.visible {
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
+}
 
-    /* ==========================================================================
-     Button hero
-     ========================================================================== */
+.destino-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.destino-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.destino-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.destino-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.destino-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.destino-card:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.destino-card:nth-child(7) {
+  animation-delay: 0.7s;
+}
+.destino-card:nth-child(8) {
+  animation-delay: 0.8s;
+}
+.destino-card:nth-child(9) {
+  animation-delay: 0.9s;
+}
 
-     .swiper-thumbs {
-      margin-top: 1rem;
-      max-width: 300px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
-    .swiper-thumbs .swiper-slide {
-      opacity: 0.4;
-      cursor: pointer;
-    }
-    
-    .swiper-thumbs .swiper-slide img {
-      width: 100%;
-      height: 60px;
-      object-fit: cover;
-      border-radius: 0.5rem;
-    }
-    
-    .swiper-thumbs .swiper-slide-thumb-active {
-      opacity: 1;
-    }
-  
-  /* ==========================================================================
-     Media Queries
-     ========================================================================== */
-  @media (max-width: 1199px) {
-    .u-section-1 {
-      background-position: 50% 39.17%;
-    }
-  
-    .u-section-1 .u-sheet-1 {
-      min-height: 713px;
-    }
-  
-    .u-section-1 .u-layout-wrap-1 {
-      margin-top: 99px;
-    }
-  
-    .u-section-1 .u-layout-cell-1 {
-      min-height: 38px;
-    }
-  
-    .u-section-2 .u-sheet-1 {
-      min-height: 756px;
-    }
-  
-    .u-section-2 .u-layout-cell-1 {
-      min-height: 696px;
-    }
-  
-    .u-section-2 .u-text-1 {
-      font-size: 4.5rem;
-      margin-top: 0;
-      margin-left: 0;
-      margin-right: 0;
-    }
-  
-    .u-section-2 .u-text-2 {
-      margin-right: 52px;
-      margin-left: 0;
-    }
-  
-    .u-section-2 .u-btn-1 {
-      margin-left: 0;
-    }
-  
-    .u-section-2 .u-image-1 {
-      height: 342px;
-      margin-top: 92px;
-      margin-right: initial;
-      margin-left: initial;
-      width: auto;
-    }
-  
-    .u-section-2 .u-layout-cell-2 {
-      min-height: 496px;
-    }
-  
-    .u-section-2 .u-list-1 {
-      width: 470px;
-    }
+.destino-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.image-wrapper {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 3px solid #ffaf03;
+  transition: border-color 0.3s ease;
+}
+
+.destino-card:hover .card-img-top {
+  border-color: #1403ff;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.destino-card:hover .image-overlay {
+  opacity: 1;
+}
+
+.overlay-icon {
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.card-body {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 0.75rem;
+}
+
+.card-title {
+  color: #000000 !important;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.destino-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0 ;
+  margin-bottom: 1rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  background: #f8f9fa;
+  padding: 0.3rem 0.8rem;
+  border-radius: 1rem;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.benefit-icon {
+  margin-right: 0.3rem;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.badge.bg-success {
+  background: linear-gradient(45deg, #28a745, #34c759);
+  color: white;
+}
+.badge.bg-warning {
+  background: linear-gradient(45deg, #ffaf03, #ffca28);
+  color: #333;
+}
+.badge.bg-primary {
+  background: linear-gradient(45deg, #1403ff, #4169e1);
+  color: white;
+}
+.badge.bg-info {
+  background: linear-gradient(45deg, #17a2b8, #48c6d9);
+  color: white;
+}
+
+.destino-card:hover .badge {
+  transform: scale(1.05);
+}
+
+.card-body .btn-primary {
+  background: linear-gradient(90deg, #ffaf03, #ffca28);
+  border: none;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  display: inline-block;
+}
+
+.card-body .btn-primary:hover {
+  background: linear-gradient(90deg, #e69b00, #ffaf03);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================================================
+   Seção: Desconto
+   ========================================================================== */
+#sec-desconto {
+  padding: 80px 20px;
+  background: #f8f9fa;
+}
+
+#sec-desconto .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+#sec-desconto img {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#sec-desconto h2 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #1403ff;
+  margin-bottom: 1rem;
+}
+
+#sec-desconto p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+#sec-desconto .btn-outline-primary {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 2rem;
+}
+
+/* ==========================================================================
+   Seção: Pacotes Turísticos
+   ========================================================================== */
+#pacotes {
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+#pacotes h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #1403ff;
+  margin-bottom: 3rem;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.mySwiper {
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pacote-card {
+  background: #fff;
+  border-radius: 1.25rem;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  border: 2px solid #ffaf03;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.pacote-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.pacote-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.pacote-card:hover .image-overlay {
+  opacity: 1;
+}
+
+.card-body h5 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1403ff;
+  margin-bottom: 1rem;
+}
+
+.card-body p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  transform: scale(1.1);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 1.2rem;
+}
+
+.swiper-pagination {
+  bottom: 15px !important;
+}
+
+.swiper-pagination-bullet {
+  background: #ffaf03;
+  opacity: 0.6;
+  width: 12px;
+  height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+  background: #1403ff;
+  opacity: 1;
+}
+
+/* ==========================================================================
+   Seção: Quem Somos
+   ========================================================================== */
+#quem-somos {
+  padding: 80px 20px;
+  background: #fff;
+}
+
+#quem-somos h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1403ff;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+#quem-somos p {
+  font-size: 1.125rem;
+  color: #333;
+  line-height: 1.8;
+}
+
+#quem-somos img {
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   Seção: Mapa
+   ========================================================================== */
+#mapa {
+  background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+#mapa .container {
+  position: relative;
+  max-width: 1200px;
+}
+
+#mapa h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1403ff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+#mapa p.lead {
+  font-size: 1.25rem;
+  color: #333;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+}
+
+.map-container {
+  border: 5px solid #ffaf03;
+  border-radius: 1.25rem;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.map-container:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+
+.map-container iframe {
+  display: block;
+  width: 100%;
+  height: 450px;
+  border: 0;
+  transition: opacity 0.3s ease;
+}
+
+#mapa .btn-primary {
+  background: linear-gradient(90deg, #ffaf03, #ffca28);
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+#mapa .btn-primary:hover {
+  background: linear-gradient(90deg, #e69b00, #ffaf03);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+#mapa .container::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #1403ff, #ffaf03);
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   Seção: Destaques e Clima
+   ========================================================================== */
+#destaques-clima {
+  background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+#destaques-clima .container {
+  position: relative;
+  z-index: 1;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.grid-item {
+  background: #fff;
+  padding: 20px;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.grid-item:hover {
+  transform: translateY(-5px);
+}
+
+.grid-item h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1403ff;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.destaques-section {
+  border: 3px solid #ffaf03;
+}
+
+.destaques-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.destaque-item {
+  text-align: center;
+}
+
+.destaque-item img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #eee;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.destaque-item:hover img {
+  border-color: #ffaf03;
+  transform: scale(1.03);
+}
+
+.destaque-item p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.clima-section {
+  border: 3px solid #ff4444;
+}
+
+.clima-container {
+  text-align: center;
+}
+
+.praia-vivo {
+  border: 3px solid #28a745;
+}
+
+.live-container {
+  position: relative;
+  text-align: center;
+}
+
+.live-container img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.live-badge {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(45deg, #ff4444, #ff6666);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.praia-vivo p {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.mural-section {
+  border: 3px solid #17a2b8;
+}
+
+.mural-section p {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.mural-section .form-group {
+  margin-bottom: 1rem;
+}
+
+.mural-section .form-group input,
+.mural-section .form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  background: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.mural-section .form-group input:focus,
+.mural-section .form-group textarea:focus {
+  border-color: #ffaf03;
+  outline: none;
+}
+
+.mural-section .form-group textarea {
+  resize: none;
+}
+
+.mural-section .btn-primary {
+  background: linear-gradient(90deg, #ffaf03, #ffca28);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.mural-section .btn-primary:hover {
+  background: linear-gradient(90deg, #e69b00, #ffaf03);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================================================
+   Seção: Parceiros
+   ========================================================================== */
+.parceiros-section {
+  background-color: #f1f1f1;
+  padding: 60px 20px;
+}
+
+.titulo-parceiros {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #1403ff;
+  text-align: center;
+}
+
+.subtitulo-parceiros {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #555;
+  text-align: center;
+}
+
+.parceiros-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.parceiro-item {
+  width: 150px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.parceiro-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: 0.3s ease;
+}
+
+.parceiro-item img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* ==========================================================================
+   Seção: Contato
+   ========================================================================== */
+#contato {
+  padding: 80px 20px;
+  background: #f8f9fa;
+}
+
+#contato h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1403ff;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#contato p {
+  font-size: 1.125rem;
+  color: #333;
+  text-align: center;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer {
+  background: #111;
+  color: #ccc;
+  font-size: 0.9rem;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer small {
+  display: block;
+  margin-top: 5px;
+  color: #666;
+}
+
+footer img {
+  border-radius: 5px;
+  background-color: white;
+  padding: 4px;
+}
+
+/* ==========================================================================
+   Botão Voltar ao Topo
+   ========================================================================== */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ffaf03;
+  color: #000;
+  font-size: 1.5rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 50%;
+  border: 2px solid #05060f;
+  box-shadow: 3px 3px #05060f;
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 999;
+}
+
+.back-to-top:hover {
+  background: #0d6efd;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ==========================================================================
+   Animações
+   ========================================================================== */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  
-  @media (max-width: 991px) {
-    .u-section-1 .u-sheet-1 {
-      min-height: 651px;
-    }
-  
-    .u-section-1 .u-text-3 {
-      font-size: clamp(3rem, 12vw, 7rem);
-    }
-  
-    .u-section-2 .u-sheet-1 {
-      min-height: 360px;
-    }
-  
-    .u-section-2 .u-layout-cell-1 {
-      min-height: 728px;
-    }
-  
-    .u-section-2 .u-container-layout-1 {
-      padding-top: 0;
-      padding-left: 19px;
-      padding-right: 19px;
-    }
-  
-    .u-section-2 .u-text-1 {
-      font-size: 3.75rem;
-      margin-left: 9px;
-      margin-right: 9px;
-    }
-  
-    .u-section-2 .u-text-2 {
-      margin-left: 9px;
-      margin-right: 9px;
-    }
-  
-    .u-section-2 .u-btn-1 {
-      margin-left: 9px;
-    }
-  
-    .u-section-2 .u-image-1 {
-      height: 386px;
-      width: 304px;
-      margin-top: 126px;
-      margin-right: 2px;
-      margin-left: auto;
-    }
-  
-    .u-section-2 .u-layout-cell-2 {
-      min-height: 728px;
-    }
-  
-    .u-section-2 .u-list-1 {
-      width: 360px;
-    }
-  
-    .destinos-section .section-title {
-      font-size: 2rem;
-    }
-  
-    .destinos-section .section-subtitle {
-      font-size: 1rem;
-    }
-  
-    .card-img-top {
-      height: 180px;
-    }
-  
-    .card-title {
-      font-size: 1.1rem;
-    }
-  
-    .card-text {
-      font-size: 0.85rem;
-    }
-  
-    .card-body .btn-primary {
-      padding: 0.5rem 1rem;
-      font-size: 0.85rem;
-    }
-  
-    .overlay-icon {
-      font-size: 2rem;
-    }
-  
-    #pacotes h2 {
-      font-size: 2.5rem;
-    }
-  
-    .pacote-card img {
-      height: 250px;
-    }
-  
-    .card-body h5 {
-      font-size: 1.3rem;
-    }
-  
-    .card-body p {
-      font-size: 0.9rem;
-    }
-  
-    .card-body .btn-primary {
-      padding: 0.5rem 1.5rem;
-      font-size: 0.9rem;
-    }
-  
-    .swiper-button-next,
-    .swiper-button-prev {
-      width: 40px;
-      height: 40px;
-    }
-  
-    .swiper-button-next::after,
-    .swiper-button-prev::after {
-      font-size: 1rem;
-    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  @media (max-width: 767px) {
-    .u-section-1 .u-sheet-1 {
-      min-height: 658px;
-      padding: 1.5rem 1%;
-    }
-  
-    .u-section-2 .u-sheet-1 {
-      min-height: 1321px;
-    }
-  
-    .u-section-2 .u-layout-wrap-1 {
-      margin-bottom: 60px;
-    }
-  
-    .u-section-2 .u-layout-cell-1 {
-      min-height: 631px;
-    }
-  
-    .u-section-2 .u-container-layout-1 {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-  
-    .u-section-2 .u-text-1 {
-      font-size: 4.5rem;
-    }
-  
-    .u-section-2 .u-text-2 {
-      margin-right: 178px;
-    }
-  
-    .u-section-2 .u-image-1 {
-      height: 437px;
-      width: 372px;
-      margin-top: -39px;
-      margin-right: 0;
-    }
-  
-    .u-section-2 .u-layout-cell-2 {
-      min-height: 570px;
-    }
-  
-    .u-section-2 .u-list-1 {
-      width: auto;
-      margin-right: initial;
-      margin-left: initial;
-    }
-  
-    .u-section-2 .u-text-3,
-    .u-section-2 .u-text-6,
-    .u-section-2 .u-text-9 {
-      font-size: 3rem;
-      margin-top: 12px;
-    }
-  
-    .u-section-2 .u-text-4,
-    .u-section-2 .u-text-7,
-    .u-section-2 .u-text-10 {
-      margin-top: -41px;
-      margin-left: 94px;
-    }
-  
-    .u-section-2 .u-text-5,
-    .u-section-2 .u-text-8,
-    .u-section-2 .u-text-11 {
-      margin-top: 17px;
-    }
-  
-    #mapa {
-      padding: 60px 15px;
-    }
-  
-    #mapa h2 {
-      font-size: 1.75rem;
-      margin-bottom: 1rem;
-    }
-  
-    #mapa p.lead {
-      font-size: 1rem;
-    }
-  
-    .map-container {
-      border-width: 3px;
-    }
-  
-    .map-container iframe {
-      height: 300px;
-    }
-  
-    #mapa .btn-primary {
-      padding: 0.75rem 2rem;
-      font-size: 1rem;
-    }
-  
-    #mapa .container::before {
-      width: 80px;
-      height: 3px;
-    }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   Button hero
+   ========================================================================== */
+.swiper-thumbs {
+  margin-top: 1rem;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-thumbs .swiper-slide {
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+.swiper-thumbs .swiper-slide img {
+  width: 100%;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.swiper-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media (max-width: 767px) {
+  /* Ajustes gerais para telas menores */
+  .u-section-1 .u-sheet-1 {
+    min-height: 500px; /* Reduzido de 658px */
+    padding: 1rem 1%; /* Reduzido para economizar espaço */
   }
-  
-  @media (max-width: 575px) {
-    .u-section-1 .u-sheet-1 {
-      min-height: 653px;
-      padding: 1rem 1%;
-    }
-  
-    .u-section-1 .u-container-layout-1 {
-      padding: 0 0.5rem 1rem;
-    }
-  
-    .u-section-1 .u-text-3 {
-      font-size: clamp(2rem, 8vw, 4rem);
-    }
-  
-    .u-section-2 .u-sheet-1 {
-      min-height: 1223px;
-    }
-  
-    .u-section-2 .u-layout-cell-1 {
-      min-height: 100px;
-    }
-  
-    .u-section-2 .u-text-1 {
-      font-size: 1.875rem;
-      margin-left: 0;
-      margin-right: 0;
-    }
-  
-    .u-section-2 .u-text-2 {
-      margin-right: 0;
-      margin-left: 0;
-    }
-  
-    .u-section-2 .u-btn-1 {
-      margin-left: 0;
-    }
-  
-    .u-section-2 .u-image-1 {
-      height: 376px;
-      width: 320px;
-    }
-  
-    .u-section-2 .u-layout-cell-2 {
-      min-height: 602px;
-    }
-  
-    .u-section-2 .u-list-1 {
-      margin-top: 22px;
-      width: auto;
-      margin-right: initial;
-      margin-left: initial;
-    }
-  
-    .u-section-2 .u-repeater-1 {
-      min-height: 580px;
-    }
-  
-    .u-section-2 .u-container-layout-3,
-    .u-section-2 .u-container-layout-4,
-    .u-section-2 .u-container-layout-5 {
-      padding-left: 9px;
-      padding-right: 9px;
-    }
-  
-    .u-section-2 .u-text-3,
-    .u-section-2 .u-text-6,
-    .u-section-2 .u-text-9 {
-      font-size: 1.5rem;
-      margin-top: 0;
-      margin-left: 1px;
-    }
-  
-    .u-section-2 .u-text-4,
-    .u-section-2 .u-text-7,
-    .u-section-2 .u-text-10 {
-      font-size: 1.125rem;
-      margin-top: -25px;
-      margin-right: 0;
-      margin-left: 49px;
-    }
-  
-    .u-section-2 .u-text-5,
-    .u-section-2 .u-text-8,
-    .u-section-2 .u-text-11 {
-      margin-top: 14px;
-      margin-left: 1px;
-      margin-right: 1px;
-    }
-  
-    .destinos-section .section-title {
-      font-size: 1.75rem;
-    }
-  
-    .destinos-section .section-subtitle {
-      font-size: 0.875rem;
-    }
-  
-    .card-img-top {
-      height: 160px;
-    }
-  
-    .card-title {
-      font-size: 1rem;
-    }
-  
-    .card-text {
-      font-size: 0.8rem;
-    }
-  
-    .badge {
-      font-size: 0.75rem;
-      padding: 0.4rem 0.8rem;
-    }
-  
-    .overlay-icon {
-      font-size: 1.8rem;
-    }
-  
-    #pacotes h2 {
-      font-size: 2rem;
-    }
-  
-    .pacote-card img {
-      height: 200px;
-    }
-  
-    .card-body h5 {
-      font-size: 1.2rem;
-    }
-  
-    .card-body p {
-      font-size: 0.85rem;
-    }
-  
-    .card-body .btn-primary {
-      padding: 0.5rem 1rem;
-      font-size: 0.85rem;
-    }
-  
-    .swiper-button-next,
-    .swiper-button-prev {
-      width: 35px;
-      height: 35px;
-    }
-  
-    .swiper-button-next::after,
-    .swiper-button-prev::after {
-      font-size: 0.9rem;
-    }
-  
-    .map-container iframe {
-      height: 250px;
-    }
-  
-    .grid-container {
-      grid-template-columns: 1fr;
-    }
-  
-    .destaques-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    .destaque-item img {
-      height: 150px;
-    }
-  
-    .live-container img {
-      height: 150px;
-    }
-  
-    .grid-item h2 {
-      font-size: 1.5rem;
-    }
+
+  .u-section-1 .u-layout-wrap-1 {
+    margin-top: 5vh; /* Reduzido para subir o conteúdo */
   }
+
+  .u-section-2 .u-sheet-1 {
+    min-height: 900px; /* Reduzido de 1321px para compactar a seção */
+    padding: 10px 2%; /* Reduzido para economizar espaço */
+    margin-bottom: 0; /* Remove margem inferior */
+  }
+
+  .u-section-2 .u-layout-wrap-1 {
+    margin-top: 20px; /* Reduzido para 20px */
+    margin-bottom: 0 !important;
+  }
+
+  .u-section-2 .u-layout-cell-1 {
+    min-height: auto; /* Remove altura fixa para se ajustar ao conteúdo */
+  }
+
+  .u-section-2 .u-container-layout-1 {
+    padding: 10px; /* Reduzido para economizar espaço */
+  }
+
+  .u-section-2 .u-text-1 {
+    font-size: 2.5rem; /* Reduzido de 4.5rem */
+    margin: 10px 0; /* Ajustado para menos espaço */
+  }
+
+  .u-section-2 .u-text-2 {
+    margin: 10px 0; /* Ajustado para menos espaço */
+    font-size: 1rem; /* Reduzido para melhor legibilidade */
+  }
+
+  .u-section-2 .u-btn-1 {
+    margin: 10px auto; /* Centralizado e com menos margem */
+    padding: 10px 20px; /* Reduzido para caber melhor */
+  }
+
+  .u-section-2 .u-image-1 {
+    height: 300px; /* Reduzido de 437px */
+    width: 100%; /* Ajustado para ocupar a largura total */
+    margin: 10px auto; /* Centralizado e com menos margem */
+  }
+
+  .u-section-2 .u-layout-cell-2 {
+    min-height: auto; /* Remove altura fixa */
+  }
+
+  .u-section-2 .u-list-1 {
+    width: 100%; /* Ocupa a largura total */
+    margin: 0; /* Remove margens desnecessárias */
+  }
+
+  .u-section-2 .u-repeater-1 {
+    min-height: auto; /* Ajusta a altura ao conteúdo */
+  }
+
+  .u-section-2 .u-text-3,
+  .u-section-2 .u-text-6,
+  .u-section-2 .u-text-9 {
+    font-size: 2rem; /* Reduzido de 3rem */
+    margin: 0; /* Remove margens */
+  }
+
+  .u-section-2 .u-text-4,
+  .u-section-2 .u-text-7,
+  .u-section-2 .u-text-10 {
+    font-size: 1rem; /* Reduzido para melhor legibilidade */
+    margin: 0 0 0 50px; /* Ajustado */
+  }
+
+  .u-section-2 .u-text-5,
+  .u-section-2 .u-text-8,
+  .u-section-2 .u-text-11 {
+    margin: 10px 0; /* Reduzido para menos espaço */
+  }
+
+  /* Ajustes para outras seções */
+  .hero-banner {
+    height: 70vh; /* Reduzido de 100vh */
+  }
+
+  .overlay {
+    padding: 20px; /* Reduzido de 40px */
+  }
+
+  .empresa-nome {
+    font-size: 2.5rem; /* Reduzido de 4rem */
+    margin-bottom: 10px; /* Reduzido */
+  }
+
+  .slogan {
+    font-size: 1.2rem; /* Reduzido de 1.8rem */
+  }
+
+  .destinos-section {
+    padding: 40px 10px; /* Reduzido */
+  }
+
+  #sec-desconto {
+    padding: 40px 10px; /* Reduzido */
+  }
+
+  #pacotes {
+    padding: 50px 10px; /* Reduzido */
+  }
+
+  #quem-somos {
+    padding: 40px 10px; /* Reduzido */
+  }
+
+  #mapa {
+    padding: 40px 10px; /* Reduzido de 60px 15px */
+  }
+
+  #mapa h2 {
+    font-size: 1.5rem; /* Reduzido de 1.75rem */
+  }
+
+  #mapa p.lead {
+    font-size: 0.9rem; /* Reduzido de 1rem */
+  }
+
+  .map-container iframe {
+    height: 250px; /* Reduzido de 300px */
+  }
+}
+
+@media (max-width: 575px) {
+  /* Ajustes para telas ainda menores */
+  .u-section-1 .u-sheet-1 {
+    min-height: 400px; /* Reduzido de 653px */
+    padding: 0.5rem 1%; /* Reduzido */
+  }
+
+  .u-section-1 .u-container-layout-1 {
+    padding: 0 0.5rem 0.5rem; /* Reduzido */
+  }
+
+  .u-section-1 .u-text-3 {
+    font-size: clamp(1.5rem, 6vw, 3rem); /* Reduzido de clamp(2rem, 8vw, 4rem) */
+  }
+
+  .u-section-2 .u-sheet-1 {
+    min-height: 800px; /* Reduzido de 1223px */
+    padding: 10px 2%; /* Reduzido */
+  }
+
+  .u-section-2 .u-layout-cell-1 {
+    min-height: auto; /* Remove altura fixa */
+  }
+
+  .u-section-2 .u-text-1 {
+    font-size: 1.5rem; /* Reduzido de 1.875rem */
+    margin: 5px 0; /* Reduzido */
+  }
+
+  .u-section-2 .u-text-2 {
+    font-size: 0.9rem; /* Reduzido */
+    margin: 5px 0; /* Reduzido */
+  }
+
+  .u-section-2 .u-btn-1 {
+    margin: 5px auto; /* Reduzido */
+    padding: 8px 15px; /* Reduzido */
+  }
+
+  .u-section-2 .u-image-1 {
+    height: 250px; /* Reduzido de 376px */
+    width: 100%; /* Ajustado para largura total */
+    margin: 5px auto; /* Reduzido */
+  }
+
+  .u-section-2 .u-layout-cell-2 {
+    min-height: auto; /* Remove altura fixa */
+  }
+
+  .u-section-2 .u-list-1 {
+    margin-top: 10px; /* Reduzido de 22px */
+    width: 100%; /* Ajustado para largura total */
+  }
+
+  .u-section-2 .u-repeater-1 {
+    min-height: auto; /* Ajusta ao conteúdo */
+  }
+
+  .u-section-2 .u-container-layout-3,
+  .u-section-2 .u-container-layout-4,
+  .u-section-2 .u-container-layout-5 {
+    padding: 5px; /* Reduzido de 9px */
+  }
+
+  .u-section-2 .u-text-3,
+  .u-section-2 .u-text-6,
+  .u-section-2 .u-text-9 {
+    font-size: 1.25rem; /* Reduzido de 1.5rem */
+    margin: 0; /* Remove margens */
+  }
+
+  .u-section-2 .u-text-4,
+  .u-section-2 .u-text-7,
+  .u-section-2 .u-text-10 {
+    font-size: 0.875rem; /* Reduzido de 1.125rem */
+    margin: 0 0 0 30px; /* Reduzido */
+  }
+
+  .u-section-2 .u-text-5,
+  .u-section-2 .u-text-8,
+  .u-section-2 .u-text-11 {
+    margin: 5px 0; /* Reduzido de 14px */
+    font-size: 0.875rem; /* Reduzido */
+  }
+
+  /* Ajustes para outras seções */
+  .hero-banner {
+    height: 60vh; /* Reduzido de 70vh */
+  }
+
+  .overlay {
+    padding: 15px; /* Reduzido de 20px */
+  }
+
+  .empresa-nome {
+    font-size: 2rem; /* Reduzido de 2.5rem */
+  }
+
+  .slogan {
+    font-size: 1rem; /* Reduzido de 1.2rem */
+  }
+
+  .destinos-section {
+    padding: 30px 5px; /* Reduzido */
+  }
+
+  .destinos-section .section-title {
+    font-size: 1.5rem; /* Reduzido de 1.75rem */
+  }
+
+  .destinos-section .section-subtitle {
+    font-size: 0.75rem; /* Reduzido de 0.875rem */
+  }
+
+  .card-img-top {
+    height: 140px; /* Reduzido de 160px */
+  }
+
+  .card-title {
+    font-size: 0.9rem; /* Reduzido de 1rem */
+  }
+
+  .card-text {
+    font-size: 0.75rem; /* Reduzido de 0.8rem */
+  }
+
+  .badge {
+    font-size: 0.65rem; /* Reduzido de 0.75rem */
+    padding: 0.3rem 0.6rem; /* Reduzido */
+  }
+
+  .overlay-icon {
+    font-size: 1.5rem; /* Reduzido de 1.8rem */
+  }
+
+  #pacotes {
+    padding: 30px 5px; /* Reduzido */
+  }
+
+  #pacotes h2 {
+    font-size: 1.75rem; /* Reduzido de 2rem */
+  }
+
+  .pacote-card img {
+    height: 180px; /* Reduzido de 200px */
+  }
+
+  .card-body h5 {
+    font-size: 1rem; /* Reduzido de 1.2rem */
+  }
+
+  .card-body p {
+    font-size: 0.75rem; /* Reduzido de 0.85rem */
+  }
+
+  .card-body .btn-primary {
+    padding: 0.4rem 0.8rem; /* Reduzido */
+    font-size: 0.75rem; /* Reduzido de 0.85rem */
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 30px; /* Reduzido de 35px */
+    height: 30px; /* Reduzido de 35px */
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 0.8rem; /* Reduzido de 0.9rem */
+  }
+
+  .map-container iframe {
+    height: 200px; /* Reduzido de 250px */
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 10px; /* Reduzido */
+  }
+
+  .destaques-grid {
+    grid-template-columns: 1fr;
+    gap: 5px; /* Reduzido */
+  }
+
+  .destaque-item img {
+    height: 120px; /* Reduzido de 150px */
+  }
+
+  .live-container img {
+    height: 120px; /* Reduzido de 150px */
+  }
+
+  .grid-item h2 {
+    font-size: 1.25rem; /* Reduzido de 1.5rem */
+  }
+
+  #quem-somos {
+    padding: 30px 5px; /* Reduzido */
+  }
+
+  #quem-somos h2 {
+    font-size: 1.75rem; /* Reduzido */
+  }
+
+  #quem-somos p {
+    font-size: 0.875rem; /* Reduzido */
+  }
+
+  .parceiros-section {
+    padding: 30px 5px; /* Reduzido */
+  }
+
+  .titulo-parceiros {
+    font-size: 1.75rem; /* Reduzido */
+  }
+
+  .subtitulo-parceiros {
+    font-size: 0.875rem; /* Reduzido */
+  }
+
+  .parceiro-item {
+    width: 120px; /* Reduzido de 150px */
+    height: 80px; /* Reduzido de 100px */
+  }
+
+  #contato {
+    padding: 30px 5px; /* Reduzido */
+  }
+
+  #contato h2 {
+    font-size: 1.75rem; /* Reduzido */
+  }
+
+  #contato p {
+    font-size: 0.875rem; /* Reduzido */
+  }
+
+  footer {
+    padding: 15px 0; /* Reduzido */
+    font-size: 0.75rem; /* Reduzido */
+  }
+}
